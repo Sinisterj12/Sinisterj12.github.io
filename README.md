@@ -2,49 +2,49 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Deployed%20with-GitHub%20Pages-222222?style=for-the-badge&logo=githubpages" alt="GitHub Pages" />
-  <img src="https://img.shields.io/website?down_message=offline&label=Live%20Site&style=for-the-badge&up_message=online&url=https%3A%2F%2Fsinisterj12.github.io%2F" alt="Live Site" />
+  <img src="https://img.shields.io/website?down_message=offline&label=Live%20Portfolio&style=for-the-badge&up_message=online&url=https%3A%2F%2Fsinisterj12.github.io%2F" alt="Live Portfolio" />
   <img src="https://img.shields.io/badge/Brand-DevBuddy-2563eb?style=for-the-badge" alt="DevBuddy" />
   <img src="https://img.shields.io/github/last-commit/Sinisterj12/Sinisterj12.github.io?style=for-the-badge&color=16a34a" alt="Last Commit" />
 </div>
 
 <p align="center">
-  Public GitHub Pages portfolio for James Clark, focused on AI-assisted tools, operational systems, and real-world support-driven software.
+  This repository powers my public GitHub Pages portfolio. The real showcase lives on the site below.
+</p>
+
+<p align="center">
+  <a href="https://sinisterj12.github.io/"><strong>View the live portfolio</strong></a>
 </p>
 
 ---
 
-### 🚀 Overview
-This repository powers my public GitHub Pages portfolio site.
+### 🌐 Live Portfolio
+**Start here:** [https://sinisterj12.github.io/](https://sinisterj12.github.io/)
 
-It is the home of **DevBuddy**, a portfolio built to present the kind of work I actually care about: practical tools, operational workflows, support-side systems, and AI-assisted projects shaped by real use instead of demo-only ideas.
-
-The site highlights both:
-- **Public repos** that can be reviewed directly
-- **Private/internal systems** that represent real operational work, including projects like **RDSCore**, positioned as a clean, professional, search-first operational system with a cinematic command-center feel where that fits the work
+This repository is the deployment source for my public portfolio. The site is where I present the broader picture: public proof of work, private operational systems, AI-assisted builds, and the kind of real-world tooling I actually spend time creating.
 
 ---
 
-### 🌐 Live Site
-**Portfolio URL:** [https://sinisterj12.github.io/](https://sinisterj12.github.io/)
+### 🚀 What the Site Shows
+- Featured public repositories you can inspect directly
+- Private and internal operational systems presented at the product level
+- DevBuddy branding and portfolio direction
+- Real-world support, automation, and operational tooling work
 
 ---
 
-### ✨ What the Site Is For
-- Present featured projects in a clean, scan-friendly format
-- Show public proof of work through real repositories
-- Reflect the DevBuddy brand and portfolio direction
-- Give visitors a direct path to my GitHub profile and selected builds
-
----
-
-### 📌 Featured Public Repositories
+### 📌 Public Proof Repositories
 - [PQManager](https://github.com/Sinisterj12/PQManager) — tray-based Windows utility built to stabilize a failing print queue in a live NCR environment
 - [Gping](https://github.com/Sinisterj12/Gping) — network diagnostics and monitoring project evolving toward a service-based operational tool
 
 ---
 
+### 🧭 Private / Operational Work Featured on the Site
+The live portfolio also references internal and private work that is not fully public on GitHub, including operational systems and command-center style builds such as **RDSCore**.
+
+---
+
 ### 👤 GitHub Profile
-See more work here:
+More repositories and activity:
 
 **GitHub:** [github.com/Sinisterj12](https://github.com/Sinisterj12)
 
