@@ -94,8 +94,7 @@ a {
   color: var(--text-muted);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .nav {
@@ -204,9 +203,8 @@ a {
 .project-type-muted,
 .project-kind,
 .driver-label {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  font-size: 0.82rem;
 }
 
 .eyebrow,
@@ -214,7 +212,7 @@ a {
 .panel-label,
 .driver-label {
   color: var(--cyan);
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .identity-note {
@@ -226,10 +224,10 @@ a {
 .hero-copy h1 {
   position: relative;
   z-index: 1;
-  max-width: 12ch;
+  max-width: 13.4ch;
   margin: 32px 0 22px;
-  font-size: clamp(3rem, 6.4vw, 6.1rem);
-  line-height: 0.9;
+  font-size: clamp(2.9rem, 5.6vw, 5.35rem);
+  line-height: 0.94;
   letter-spacing: -0.045em;
 }
 
@@ -240,6 +238,28 @@ a {
   margin: 0;
   color: var(--text-soft);
   font-size: 1.07rem;
+}
+
+.credibility-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.credibility-row span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: #d9e8f7;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  font-weight: 750;
 }
 
 .hero-actions,
@@ -443,6 +463,24 @@ section[id] {
   margin-bottom: 16px;
 }
 
+.section-label {
+  display: inline-flex;
+  color: #74efe5;
+  font-weight: 800;
+}
+
+.panel-label,
+.driver-label {
+  color: #73e8dc;
+}
+
+.project-type,
+.project-type-muted,
+.project-kind {
+  font-size: 0.78rem;
+  letter-spacing: 0;
+}
+
 .section-note {
   max-width: 48ch;
   margin: 0;
@@ -515,7 +553,7 @@ section[id] {
 }
 
 .arsenal-lead::after {
-  content: "AI OPS";
+  content: "build";
   position: absolute;
   right: 24px;
   bottom: -18px;
@@ -585,10 +623,9 @@ section[id] {
   min-height: 46px;
   color: #d8fffa;
   background: rgba(8, 13, 19, 0.88);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 0.86rem;
 }
 
 .driver-grid {
@@ -720,7 +757,7 @@ section[id] {
   padding: 0 10px;
   border-radius: 999px;
   border: 1px solid var(--line-strong);
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .project-type {
@@ -819,7 +856,7 @@ section[id] {
   }
 
   .hero-copy h1 {
-    max-width: 13ch;
+    max-width: 13.4ch;
   }
 
   .section-heading {
