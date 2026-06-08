@@ -14,6 +14,10 @@
   --amber: #ffbf5f;
   --green: #63e6a9;
   --red: #ff6b6b;
+  --section-line: rgba(57, 230, 212, 0.42);
+  --section-wash: rgba(57, 230, 212, 0.035);
+  --section-label-color: #74efe5;
+  --section-label-bg: rgba(57, 230, 212, 0.06);
   --shadow: 0 28px 70px rgba(0, 0, 0, 0.42);
   --shadow-tight: 0 18px 42px rgba(0, 0, 0, 0.28);
   --radius-xl: 26px;
@@ -409,7 +413,23 @@ a {
 
 .section,
 .section-alt {
-  padding: 42px 0;
+  position: relative;
+  padding: 54px 0;
+  border-top: 1px solid rgba(225, 238, 255, 0.08);
+  background:
+    linear-gradient(180deg, var(--section-wash), transparent 180px),
+    rgba(6, 10, 15, 0.18);
+}
+
+.section::before,
+.section-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--section-line), transparent);
+  opacity: 0.95;
 }
 
 .profile-signal-section {
@@ -459,7 +479,58 @@ a {
 }
 
 .section-alt {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  background:
+    linear-gradient(180deg, var(--section-wash), transparent 220px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.024), transparent);
+}
+
+#about {
+  --section-line: rgba(57, 230, 212, 0.42);
+  --section-wash: rgba(57, 230, 212, 0.035);
+  --section-label-color: #74efe5;
+  --section-label-bg: rgba(57, 230, 212, 0.06);
+}
+
+#scope {
+  --section-line: rgba(255, 191, 95, 0.5);
+  --section-wash: rgba(255, 191, 95, 0.04);
+  --section-label-color: #ffcf7d;
+  --section-label-bg: rgba(255, 191, 95, 0.08);
+}
+
+#tools {
+  --section-line: rgba(99, 230, 169, 0.48);
+  --section-wash: rgba(99, 230, 169, 0.035);
+  --section-label-color: #89efbd;
+  --section-label-bg: rgba(99, 230, 169, 0.07);
+}
+
+#arsenal {
+  --section-line: rgba(56, 164, 255, 0.5);
+  --section-wash: rgba(56, 164, 255, 0.04);
+  --section-label-color: #8fc8ff;
+  --section-label-bg: rgba(56, 164, 255, 0.08);
+}
+
+#projects {
+  --section-line: rgba(255, 191, 95, 0.48);
+  --section-wash: rgba(255, 191, 95, 0.035);
+  --section-label-color: #ffcf7d;
+  --section-label-bg: rgba(255, 191, 95, 0.08);
+}
+
+#principles {
+  --section-line: rgba(57, 230, 212, 0.44);
+  --section-wash: rgba(57, 230, 212, 0.03);
+  --section-label-color: #74efe5;
+  --section-label-bg: rgba(57, 230, 212, 0.06);
+}
+
+#contact {
+  --section-line: rgba(255, 191, 95, 0.54);
+  --section-wash: rgba(255, 191, 95, 0.04);
+  --section-label-color: #ffcf7d;
+  --section-label-bg: rgba(255, 191, 95, 0.08);
 }
 
 .section-grid {
@@ -507,7 +578,13 @@ a {
 
 .section-label {
   display: inline-flex;
-  color: #74efe5;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--section-line);
+  border-radius: 999px;
+  color: var(--section-label-color);
+  background: var(--section-label-bg);
   font-weight: 800;
 }
 
