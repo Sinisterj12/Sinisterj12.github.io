@@ -129,7 +129,7 @@ a {
 }
 
 .hero {
-  padding: 72px 0 34px;
+  padding: 58px 0 34px;
 }
 
 .hero-grid {
@@ -155,8 +155,8 @@ a {
 .hero-copy {
   position: relative;
   overflow: hidden;
-  min-height: 540px;
-  padding: 40px;
+  min-height: 500px;
+  padding: 34px;
   border-radius: var(--radius-xl);
   background:
     linear-gradient(120deg, rgba(57, 230, 212, 0.12), transparent 36%),
@@ -224,20 +224,20 @@ a {
 .hero-copy h1 {
   position: relative;
   z-index: 1;
-  max-width: 13.4ch;
-  margin: 32px 0 22px;
-  font-size: clamp(2.9rem, 5.6vw, 5.35rem);
-  line-height: 0.94;
-  letter-spacing: -0.045em;
+  max-width: 15ch;
+  margin: 28px 0 18px;
+  font-size: clamp(2.6rem, 4.5vw, 4.15rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
 .hero-text {
   position: relative;
   z-index: 1;
-  max-width: 62ch;
+  max-width: 68ch;
   margin: 0;
   color: var(--text-soft);
-  font-size: 1.07rem;
+  font-size: 1.03rem;
 }
 
 .credibility-row {
@@ -410,6 +410,52 @@ a {
 .section,
 .section-alt {
   padding: 42px 0;
+}
+
+.profile-signal-section {
+  padding: 8px 0 34px;
+}
+
+.profile-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.profile-signal-grid article {
+  min-height: 156px;
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(18, 26, 36, 0.9), rgba(9, 13, 19, 0.94));
+  box-shadow: var(--shadow-tight);
+}
+
+.profile-signal-grid span,
+.profile-signal-grid strong,
+.profile-signal-grid p {
+  display: block;
+}
+
+.profile-signal-grid span {
+  color: #73e8dc;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.profile-signal-grid strong {
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.18;
+}
+
+.profile-signal-grid p {
+  margin: 10px 0 0;
+  color: var(--text-soft);
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .section-alt {
@@ -979,6 +1025,7 @@ a {
   .hero-grid,
   .section-grid,
   .contact-wrap,
+  .profile-signal-grid,
   .principles-grid,
   .arsenal-lead,
   .compact-project-grid {
@@ -990,7 +1037,7 @@ a {
   }
 
   .hero-copy h1 {
-    max-width: 13.4ch;
+    max-width: 15ch;
   }
 
   .section-heading {
@@ -1035,7 +1082,7 @@ a {
   }
 
   .hero {
-    padding-top: 34px;
+    padding-top: 26px;
   }
 
   .hero-copy,
@@ -1051,12 +1098,13 @@ a {
   }
 
   .hero-copy {
-    padding: 24px;
+    padding: 22px;
   }
 
   .hero-copy h1 {
-    margin-top: 24px;
-    font-size: clamp(2.7rem, 13vw, 4.1rem);
+    margin-top: 22px;
+    font-size: clamp(2.35rem, 9.5vw, 3.25rem);
+    line-height: 1.02;
   }
 
   .avatar {
@@ -1078,6 +1126,10 @@ a {
   .section,
   .section-alt {
     padding: 32px 0;
+  }
+
+  .profile-signal-section {
+    padding: 8px 0 26px;
   }
 
   .driver-grid,
