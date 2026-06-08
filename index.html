@@ -426,9 +426,32 @@
         <div class="section-heading">
           <div>
             <p class="section-label">Projects</p>
-            <h2>Selected work</h2>
+            <h2>Selected proof of work</h2>
           </div>
           <p class="section-note">Public utilities, private prototypes, and in-progress systems shaped by real support work.</p>
+        </div>
+
+        <div class="project-proof-board" aria-label="Project proof themes">
+          <article>
+            <span>Production fix</span>
+            <strong>Small utility, real operational impact</strong>
+            <p>PQManager shows the pattern I care about most: find the repeat failure, build the narrow tool, and keep stores running.</p>
+          </article>
+          <article>
+            <span>Internal systems</span>
+            <strong>Workflows before dashboards</strong>
+            <p>RDSCore, GThreads, and related tools are shaped around searchable support context, not decorative screens.</p>
+          </article>
+          <article>
+            <span>Automation habit</span>
+            <strong>Google Workspace as an operating layer</strong>
+            <p>Apps Script, Sheets, Gmail, Chat, Firebase, and internal workflows turn recurring support work into repeatable systems.</p>
+          </article>
+          <article>
+            <span>AI build process</span>
+            <strong>Fast iteration with receipts</strong>
+            <p>CodexSystem and AuditME keep agent work oriented around proof, handoffs, runtime checks, and clean continuation.</p>
+          </article>
         </div>
 
         <div class="project-stack">
@@ -440,6 +463,20 @@
             <h3>RDSCore CRM Workspace</h3>
             <p>RDSCore is a private CRM wrapper and operations workspace I am shaping around the real friction of support work. Instead of forcing the team through slow clicks and scattered screens, the goal is one fast search surface that can pull together store context, ticket history, contacts, vendor references, employee visibility, repeat-issue warnings, assets, and operational notes.</p>
             <p>Under the hood, the system is being shaped around a FastAPI backend, NetworkX relationship graph, structured search routing, runtime contracts, and selective AI escalation. The point is not to make a flashy dashboard. The point is to give the helpdesk a cleaner command surface that turns messy operational data into something searchable, connected, and actually usable during a busy support day.</p>
+            <div class="evidence-row" aria-label="RDSCore proof points">
+              <div>
+                <span>Problem</span>
+                <strong>Scattered CRM context and slow support lookup</strong>
+              </div>
+              <div>
+                <span>Direction</span>
+                <strong>Search-first command surface with graph-backed relationships</strong>
+              </div>
+              <div>
+                <span>Skill shown</span>
+                <strong>Workflow design, FastAPI planning, data modeling, AI routing</strong>
+              </div>
+            </div>
             <div class="tags">
               <span>CRM Wrapper</span>
               <span>Operations Hub</span>
@@ -457,6 +494,16 @@
             </div>
             <h3>CodexSystem / AuditME</h3>
             <p>AuditME is my AI build operating layer: a repo-memory engine, verification gate, agent handoff system, and guardrail stack built to keep long sessions aligned. It helps agents resume context, document decisions, prove UI changes, catch lazy shortcuts, and move rough work toward a cleaner handoff.</p>
+            <div class="evidence-row compact-evidence" aria-label="AuditME proof points">
+              <div>
+                <span>Problem</span>
+                <strong>Long AI sessions drift without memory, proof, and handoffs</strong>
+              </div>
+              <div>
+                <span>Direction</span>
+                <strong>Repo instructions, receipts, closeout checks, and continuation state</strong>
+              </div>
+            </div>
             <div class="tags">
               <span>Agent Orchestration</span>
               <span>Repo Memory</span>
@@ -559,6 +606,16 @@
             </div>
             <h3>After Hours Emergency Alert System</h3>
             <p>One of the first tools I built with AI. I run a helpdesk where after-hours calls route to the on-call tech, but voicemail alert emails were often handled without anyone replying "got it" for the team to see. I built a Google Apps Script workflow that watches for those conditions and alerts a shared Google Chat room so the team knows a call may still need attention. It gave us a practical way to catch misses, confirm accountability, and step in fast when needed.</p>
+            <div class="evidence-row compact-evidence" aria-label="After-hours alert proof points">
+              <div>
+                <span>Problem</span>
+                <strong>After-hours voicemail alerts could be missed without visible team acknowledgement</strong>
+              </div>
+              <div>
+                <span>Build</span>
+                <strong>Apps Script workflow that watches email conditions and alerts Google Chat</strong>
+              </div>
+            </div>
             <div class="tags">
               <span>Google Apps Script</span>
               <span>Google Chat</span>
@@ -573,6 +630,16 @@
             </div>
             <h3>PQManager</h3>
             <p>Built to stabilize a failing NCR virtual terminal print queue that would constantly fill and crash printing. After support could not resolve the issue, I created a utility that automatically clears the queue and keeps operations running. It has been running in production for years with zero repeat issues or support calls.</p>
+            <div class="evidence-row compact-evidence" aria-label="PQManager proof points">
+              <div>
+                <span>Problem</span>
+                <strong>NCR print queue failures were interrupting real operations</strong>
+              </div>
+              <div>
+                <span>Proof</span>
+                <strong>Public repo plus years of stable production use</strong>
+              </div>
+            </div>
             <div class="tags">
               <span>Print Queue</span>
               <span>NCR</span>
@@ -590,6 +657,16 @@
             </div>
             <h3>Gping</h3>
             <p>A Windows-first Go monitor for isolating whether payment trouble is local to the store network, part of the general internet path, or tied to the payment transaction path.</p>
+            <div class="evidence-row compact-evidence" aria-label="Gping proof points">
+              <div>
+                <span>Problem</span>
+                <strong>Payment trouble needs faster separation between store, internet, and processor paths</strong>
+              </div>
+              <div>
+                <span>Build</span>
+                <strong>Go-based Windows monitor for practical diagnostics</strong>
+              </div>
+            </div>
             <div class="tags">
               <span>Go</span>
               <span>Network Monitor</span>

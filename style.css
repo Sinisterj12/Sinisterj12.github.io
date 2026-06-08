@@ -950,6 +950,66 @@ a {
     linear-gradient(180deg, rgba(18, 26, 36, 0.92), rgba(9, 13, 19, 0.95));
 }
 
+.project-proof-board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.project-proof-board article {
+  min-height: 188px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(18, 26, 36, 0.94), rgba(8, 12, 18, 0.96));
+  box-shadow: var(--shadow-tight);
+}
+
+.project-proof-board article:nth-child(1) {
+  border-color: rgba(255, 191, 95, 0.28);
+}
+
+.project-proof-board article:nth-child(2) {
+  border-color: rgba(57, 230, 212, 0.22);
+}
+
+.project-proof-board article:nth-child(3) {
+  border-color: rgba(56, 164, 255, 0.22);
+}
+
+.project-proof-board article:nth-child(4) {
+  border-color: rgba(99, 230, 169, 0.22);
+}
+
+.project-proof-board span,
+.project-proof-board strong,
+.project-proof-board p {
+  display: block;
+}
+
+.project-proof-board span,
+.evidence-row span {
+  color: #73e8dc;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.project-proof-board strong {
+  margin-top: 10px;
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.18;
+}
+
+.project-proof-board p {
+  margin: 10px 0 0;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
 .project-card.internal-card {
   border-color: rgba(255, 255, 255, 0.12);
 }
@@ -1024,6 +1084,35 @@ a {
   margin-top: 12px;
 }
 
+.evidence-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 18px;
+  border: 1px solid rgba(57, 230, 212, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(57, 230, 212, 0.14);
+}
+
+.compact-evidence {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.evidence-row div {
+  min-height: 92px;
+  padding: 14px;
+  background: rgba(6, 10, 15, 0.86);
+}
+
+.evidence-row strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--text);
+  font-size: 0.94rem;
+  line-height: 1.38;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -1068,7 +1157,8 @@ a {
 @media (max-width: 1080px) {
   .driver-grid,
   .workload-grid,
-  .workflow-grid {
+  .workflow-grid,
+  .project-proof-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1094,7 +1184,10 @@ a {
   .arsenal-lead,
   .compact-project-grid,
   .capability-board,
-  .capability-grid {
+  .capability-grid,
+  .project-proof-board,
+  .evidence-row,
+  .compact-evidence {
     grid-template-columns: 1fr;
   }
 
