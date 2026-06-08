@@ -531,13 +531,77 @@ a {
 .principles-grid,
 .project-stack,
 .workflow-grid,
-.workload-grid {
+.workload-grid,
+.capability-grid {
   display: grid;
   gap: 18px;
 }
 
 .principles-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.capability-board {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 18px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255, 191, 95, 0.22);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 0 0, rgba(255, 191, 95, 0.16), transparent 32%),
+    linear-gradient(180deg, rgba(16, 21, 29, 0.94), rgba(8, 12, 18, 0.96));
+  box-shadow: var(--shadow-tight);
+}
+
+.capability-intro {
+  align-self: center;
+}
+
+.capability-intro h3 {
+  margin: 9px 0 0;
+  font-size: 1.74rem;
+  line-height: 1.08;
+}
+
+.capability-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.capability-grid article {
+  min-height: 162px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.capability-grid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #061017;
+  background: linear-gradient(135deg, var(--cyan), var(--amber));
+  font-weight: 900;
+  font-size: 0.82rem;
+}
+
+.capability-grid h3 {
+  margin: 14px 0 9px;
+  font-size: 1.1rem;
+  line-height: 1.16;
+}
+
+.capability-grid p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .project-card,
@@ -1028,7 +1092,9 @@ a {
   .profile-signal-grid,
   .principles-grid,
   .arsenal-lead,
-  .compact-project-grid {
+  .compact-project-grid,
+  .capability-board,
+  .capability-grid {
     grid-template-columns: 1fr;
   }
 
