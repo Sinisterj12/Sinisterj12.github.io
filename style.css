@@ -2186,13 +2186,91 @@ a {
 .contact-wrap {
   padding: 30px;
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) auto;
-  gap: 20px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.58fr);
+  gap: 24px;
+  align-items: stretch;
   background:
     radial-gradient(circle at top left, rgba(255, 191, 95, 0.18), transparent 36%),
     linear-gradient(180deg, rgba(24, 25, 28, 0.94), rgba(8, 12, 18, 0.96));
   border-color: rgba(255, 191, 95, 0.28);
+}
+
+.contact-command-card {
+  padding: 18px;
+  border: 1px solid rgba(255, 191, 95, 0.26);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(255, 191, 95, 0.12), transparent 48%),
+    rgba(5, 9, 14, 0.72);
+  box-shadow: var(--shadow-tight);
+}
+
+.contact-profile-row {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.contact-profile-row img {
+  width: 66px;
+  height: 66px;
+  flex: 0 0 auto;
+  border-radius: 16px;
+  object-fit: cover;
+  object-position: 50% 28%;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.contact-profile-row strong,
+.contact-profile-row span {
+  display: block;
+}
+
+.contact-profile-row strong {
+  color: var(--text);
+  font-size: 1.14rem;
+  line-height: 1.12;
+}
+
+.contact-profile-row span {
+  margin-top: 4px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.contact-facts {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  margin: 16px 0;
+  border: 1px solid rgba(255, 191, 95, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(255, 191, 95, 0.14);
+}
+
+.contact-facts div {
+  padding: 13px;
+  background: rgba(5, 9, 14, 0.82);
+}
+
+.contact-facts dt,
+.contact-facts dd {
+  margin: 0;
+}
+
+.contact-facts dt {
+  color: #ffe0ad;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.contact-facts dd {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 0.92rem;
+  line-height: 1.36;
+  overflow-wrap: anywhere;
 }
 
 .opportunity-list {
@@ -2213,6 +2291,31 @@ a {
   background: rgba(255, 191, 95, 0.08);
   font-size: 0.9rem;
   font-weight: 800;
+}
+
+.site-footer {
+  padding: 22px 0 34px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 8, 13, 0.78);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.site-footer span {
+  color: var(--text);
+}
+
+.site-footer a {
+  color: #ffe0ad;
 }
 
 @media (max-width: 1080px) {
