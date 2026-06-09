@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Launcher | James Clark DevBuddy</title>
+  <meta name="description" content="Project Launcher is James Clark's private Windows desktop launcher concept for starting, checking, stopping, and exposing local development stacks safely." />
+  <meta name="author" content="James Clark" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://sinisterj12.github.io/projects/project-launcher.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Project Launcher | James Clark DevBuddy" />
+  <meta property="og:description" content="Private Windows desktop launcher concept for local dev stacks, checks, tunnels, and safer operator flow." />
+  <meta property="og:url" content="https://sinisterj12.github.io/projects/project-launcher.html" />
+  <meta property="og:image" content="https://sinisterj12.github.io/assets/james-clark-brainstorming.jpg" />
+  <link rel="icon" type="image/jpeg" href="../assets/james-clark-brainstorming.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#top">Skip to main content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html#top">DevBuddy<span>James Clark</span></a>
+      <nav class="nav">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../proof-log.html">Proof Log</a>
+        <a class="nav-cta" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="detail-main">
+    <section class="detail-hero">
+      <div class="container">
+        <div class="detail-hero-panel">
+          <a class="crumb-link" href="../index.html#projects">Back to projects</a>
+          <h1>Project Launcher</h1>
+          <p>A private Windows desktop launcher concept for starting, stopping, checking, and publicly exposing local dev stacks without forcing the operator through fragile terminal command chains.</p>
+          <div class="detail-meta-row">
+            <span>Private utility</span>
+            <span>Dev stack control</span>
+            <span>Windows desktop</span>
+            <span>Operator safety</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container detail-grid">
+        <div>
+          <article class="detail-card">
+            <h2>The problem</h2>
+            <p>Local development work often requires the same repeated steps: start a server, check health, open a tunnel, stop services, and remember which terminal or port owns what. Project Launcher is aimed at making that operator flow visible and safer.</p>
+            <div class="detail-list">
+              <div>
+                <strong>Command friction</strong>
+                <span>Repeated local dev commands are easy to mistype or forget.</span>
+              </div>
+              <div>
+                <strong>Runtime ambiguity</strong>
+                <span>Operators need quick feedback on what is running and what is exposed.</span>
+              </div>
+              <div>
+                <strong>Safety need</strong>
+                <span>Public tunnels and local services should be deliberate, visible, and stoppable.</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="detail-card">
+            <h2>System shape</h2>
+            <p>The working direction is a PySide6-style desktop control deck with project rows, start/check/stop actions, tunnel controls, status output, and simple guardrails around exposing local work.</p>
+          </article>
+
+          <article class="detail-card">
+            <h2>What this shows</h2>
+            <div class="detail-list">
+              <div>
+                <strong>Operator tooling</strong>
+                <span>Turning repeated terminal friction into a safer desktop workflow.</span>
+              </div>
+              <div>
+                <strong>Runtime thinking</strong>
+                <span>Separating start, check, tunnel, and stop actions instead of hiding them.</span>
+              </div>
+              <div>
+                <strong>Practical UX</strong>
+                <span>Building tools around the way an operator actually works during a busy build day.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="detail-preview-panel">
+          <article class="preview-frame preview-launcher">
+            <div class="preview-chrome"><span></span><span></span><span></span></div>
+            <div class="preview-header">
+              <strong>Sanitized launcher preview</strong>
+              <em>Controls shown without private project paths</em>
+            </div>
+            <div class="mock-launcher">
+              <span>Start</span>
+              <span>Check</span>
+              <span>Tunnel</span>
+              <span>Stop</span>
+            </div>
+            <p>Desktop controls for local stacks, checks, tunnels, and safer operator flow.</p>
+          </article>
+          <div class="tags">
+            <span>PySide6</span>
+            <span>Cloudflare</span>
+            <span>Local Dev</span>
+            <span>Runtime Checks</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>James Clark · DevBuddy</span>
+      <a href="../proof-log.html">Proof Log</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

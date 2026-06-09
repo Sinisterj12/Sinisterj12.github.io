@@ -27,6 +27,8 @@ This repository is the deployment source for my public portfolio. The site is wh
 ### 🚀 What the Site Shows
 - Featured public repositories you can inspect directly
 - Private and internal operational systems presented at the product level
+- Public-safe project detail pages for RDSCore, AuditME / CodexSystem, GThreads, and Project Launcher
+- A proof log / build journal for visible progress and verification notes
 - DevBuddy branding and portfolio direction
 - Real-world support, automation, and operational tooling work
 
@@ -40,6 +42,13 @@ This repository is the deployment source for my public portfolio. The site is wh
 
 ### 🧭 Private / Operational Work Featured on the Site
 The live portfolio also references internal and private work that is not fully public on GitHub, including operational systems and command-center style builds such as **RDSCore**.
+
+Project detail pages:
+- [RDSCore CRM Workspace](https://sinisterj12.github.io/projects/rdscore.html)
+- [AuditME / CodexSystem](https://sinisterj12.github.io/projects/auditme-codexsystem.html)
+- [GThreads](https://sinisterj12.github.io/projects/gthreads.html)
+- [Project Launcher](https://sinisterj12.github.io/projects/project-launcher.html)
+- [Proof Log](https://sinisterj12.github.io/proof-log.html)
 
 ---
 
