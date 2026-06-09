@@ -1334,7 +1334,7 @@ a:focus-visible {
 }
 
 .workflow-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 18px;
 }
 
@@ -1353,6 +1353,10 @@ a:focus-visible {
 
 .workflow-card:nth-child(3) {
   border-color: rgba(99, 230, 169, 0.2);
+}
+
+.workflow-card:nth-child(4) {
+  border-color: rgba(255, 93, 107, 0.22);
 }
 
 .tool-cloud-panel {
@@ -1543,6 +1547,28 @@ a:focus-visible {
 
 .project-proof-board article:nth-child(4) {
   border-color: rgba(99, 230, 169, 0.22);
+}
+
+.project-proof-shot {
+  overflow: hidden;
+  margin: 18px 0;
+  border: 1px solid rgba(255, 191, 95, 0.24);
+  border-radius: var(--radius-md);
+  background: rgba(3, 7, 12, 0.82);
+}
+
+.project-proof-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-proof-shot figcaption {
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  font-weight: 800;
 }
 
 .project-proof-board span,
@@ -1802,6 +1828,15 @@ a:focus-visible {
   color: var(--text-soft);
   font-size: 0.88rem;
   line-height: 1.48;
+}
+
+.preview-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(255, 191, 95, 0.22);
+  border-radius: var(--radius-sm);
+  background: #05090e;
 }
 
 .mock-crm,
