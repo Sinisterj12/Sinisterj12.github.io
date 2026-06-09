@@ -25,3 +25,4 @@ Current public asset workflow:
 
 - `assets/james-clark-brainstorming.jpg` is the public portrait asset.
 - `assets/portfolio-previews/README.md` documents the safe screenshot intake checklist for future project previews.
+- `assets/portfolio-previews/rdscore-live-race-demo.png` and `assets/portfolio-previews/rdscore-priority-ticket-demo.png` are approved RDSCore demo-data screenshots from the real app UI.

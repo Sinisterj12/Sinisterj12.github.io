@@ -2517,6 +2517,62 @@ a:focus-visible {
   margin-top: 12px;
 }
 
+.detail-proof-section {
+  padding-bottom: 0;
+}
+
+.detail-section-kicker {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.live-proof-card {
+  overflow: hidden;
+}
+
+.live-proof-stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.live-proof-shot {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  background: rgba(3, 7, 12, 0.82);
+}
+
+.live-proof-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #05090e;
+}
+
+.live-proof-shot figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.live-proof-shot strong {
+  color: var(--text);
+  line-height: 1.16;
+}
+
+.live-proof-shot span {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.42;
+}
+
 .detail-list {
   display: grid;
   gap: 1px;
