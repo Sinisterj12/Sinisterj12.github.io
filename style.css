@@ -532,8 +532,16 @@ a {
   --section-label-bg: rgba(255, 191, 95, 0.08);
 }
 
-#principles {
+#fit {
   --section-index: "07";
+  --section-line: rgba(99, 230, 169, 0.48);
+  --section-wash: rgba(99, 230, 169, 0.036);
+  --section-label-color: #89efbd;
+  --section-label-bg: rgba(99, 230, 169, 0.08);
+}
+
+#principles {
+  --section-index: "08";
   --section-line: rgba(57, 230, 212, 0.44);
   --section-wash: rgba(57, 230, 212, 0.03);
   --section-label-color: #74efe5;
@@ -541,7 +549,7 @@ a {
 }
 
 #contact {
-  --section-index: "08";
+  --section-index: "09";
   --section-line: rgba(255, 191, 95, 0.54);
   --section-wash: rgba(255, 191, 95, 0.04);
   --section-label-color: #ffcf7d;
@@ -1519,6 +1527,134 @@ a {
   font-weight: 900;
 }
 
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fit-card {
+  min-height: 250px;
+  padding: 22px;
+  border: 1px solid rgba(99, 230, 169, 0.18);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 120px),
+    rgba(8, 13, 19, 0.92);
+  box-shadow: var(--shadow-tight);
+}
+
+.fit-card-primary {
+  border-color: rgba(99, 230, 169, 0.36);
+  background:
+    radial-gradient(circle at top right, rgba(99, 230, 169, 0.16), transparent 42%),
+    linear-gradient(180deg, rgba(18, 31, 28, 0.96), rgba(8, 13, 19, 0.96));
+}
+
+.fit-card span,
+.fit-card h3,
+.fit-card p {
+  display: block;
+}
+
+.fit-card span {
+  color: #89efbd;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.fit-card h3 {
+  margin: 14px 0 10px;
+  font-size: 1.24rem;
+  line-height: 1.14;
+}
+
+.fit-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.now-building-panel {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.42fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+  padding: 22px;
+  border: 1px solid rgba(99, 230, 169, 0.24);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 0 0, rgba(99, 230, 169, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(14, 24, 23, 0.94), rgba(8, 12, 18, 0.96));
+  box-shadow: var(--shadow-tight);
+}
+
+.now-building-panel h3 {
+  margin: 10px 0 0;
+  font-size: 1.6rem;
+  line-height: 1.08;
+}
+
+.now-building-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 230, 169, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(99, 230, 169, 0.14);
+}
+
+.now-building-grid article {
+  min-height: 134px;
+  padding: 15px;
+  background: rgba(6, 10, 15, 0.86);
+}
+
+.now-building-grid strong,
+.now-building-grid span {
+  display: block;
+}
+
+.now-building-grid strong {
+  color: var(--text);
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.now-building-grid span {
+  margin-top: 8px;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.status-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.status-key span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid rgba(99, 230, 169, 0.18);
+  border-radius: 999px;
+  color: var(--text-soft);
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.status-key strong {
+  margin-right: 7px;
+  color: #d8ffeb;
+}
+
 .contact-wrap {
   padding: 30px;
   display: grid;
@@ -1531,12 +1667,34 @@ a {
   border-color: rgba(255, 191, 95, 0.28);
 }
 
+.opportunity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.opportunity-list span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 191, 95, 0.22);
+  border-radius: 999px;
+  color: #ffe0ad;
+  background: rgba(255, 191, 95, 0.08);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
 @media (max-width: 1080px) {
   .driver-grid,
   .workload-grid,
   .workflow-grid,
   .project-proof-board,
-  .systems-map-board {
+  .systems-map-board,
+  .fit-grid,
+  .now-building-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1572,6 +1730,7 @@ a {
   .case-study-steps,
   .systems-map-board,
   .map-insight-strip,
+  .now-building-panel,
   .evidence-row,
   .compact-evidence {
     grid-template-columns: 1fr;
@@ -1693,6 +1852,8 @@ a {
   .driver-grid,
   .workload-grid,
   .workflow-grid,
+  .fit-grid,
+  .now-building-grid,
   .day-flow,
   .signal-strip {
     grid-template-columns: 1fr;
