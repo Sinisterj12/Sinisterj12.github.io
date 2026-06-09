@@ -64,6 +64,32 @@ a {
   text-decoration: none;
 }
 
+a:focus-visible {
+  outline: 3px solid rgba(255, 191, 95, 0.92);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: 14px;
+  z-index: 50;
+  transform: translateY(-150%);
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #061017;
+  background: var(--amber);
+  font-size: 0.9rem;
+  font-weight: 900;
+  box-shadow: var(--shadow-tight);
+  transition: transform 0.18s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
 .container {
   width: min(calc(100% - 40px), var(--max-width));
   margin: 0 auto;
