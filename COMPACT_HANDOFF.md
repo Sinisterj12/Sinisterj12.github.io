@@ -1,28 +1,46 @@
-# Compact Handoff: Portfolio UI Mockups & Visual Consistency
+# Compact Handoff: DevBuddy Portfolio
 
-This handoff details the changes and next steps for the DevBuddy Portfolio repository after completing the visual mockup generation lane.
+Status: active
+Repo: `Sinisterj12/Sinisterj12.github.io`
+Live site: `https://sinisterj12.github.io/`
+Primary branch: `main`
 
-## What Changed
-1.  **Generated Assets**: Created three premium dark-mode UI mockup screenshots and saved them to the repository:
-    *   `assets/portfolio-previews/gthreads-preview.png` (Gmail case workspace UI)
-    *   `assets/portfolio-previews/project-launcher-preview.png` (Desktop launcher dashboard UI)
-    *   `assets/portfolio-previews/auditme-preview.png` (AuditME code quality agent ops UI)
-2.  **Markup Integration**:
-    *   [projects/gthreads.html](file:///C:/Users/pctec/.gemini/antigravity/scratch/sinisterj12.github.io/projects/gthreads.html): Replaced CSS-only abstract wireframe with the new UI figure.
-    *   [projects/project-launcher.html](file:///C:/Users/pctec/.gemini/antigravity/scratch/sinisterj12.github.io/projects/project-launcher.html): Replaced CSS-only wireframe with the new UI figure.
-    *   [projects/auditme-codexsystem.html](file:///C:/Users/pctec/.gemini/antigravity/scratch/sinisterj12.github.io/projects/auditme-codexsystem.html): Replaced CSS-only wireframe with the new UI figure.
-3.  **Visual Consistency**: All 4 case study detail pages are now visually aligned, using matching screenshot figures, glassmorphic styles, and relative spotlight scripts.
+## Current Direction
 
-## Stencil & Git State
-*   **Branch**: `main`
-*   **HEAD Commit**: (Will be committed below)
-*   **Pushed**: Yes, pushed to remote `main` at `github.com/Sinisterj12/sinisterj12.github.io.git`.
-*   **Local-Only Caveats**: None. No database, environment variables, or local config required.
+This repository is James Clark's public GitHub Pages portfolio. The homepage should read as a professional profile first, then a proof-backed portfolio for vibe coding, AI-assisted support tooling, POS/payment operations, Google Workspace automation, and internal operations systems.
+
+## Current Site Shape
+
+- Homepage: `index.html`
+- Shared styling: `style.css`
+- Interactive cursor/focus polish: `assets/spotlight.js`
+- Proof log: `proof-log.html`
+- Project pages:
+  - `projects/rdscore.html`
+  - `projects/auditme-codexsystem.html`
+  - `projects/gthreads.html`
+  - `projects/project-launcher.html`
+
+## Asset Notes
+
+Public-safe portfolio assets live under `assets/`.
+
+Private or source-only material should stay out of Git and belongs under `private-source-materials/`, which is ignored by `.gitignore`.
+
+## Current UX Guidance
+
+- Default homepage view should stay clear and scrollable for first-time visitors.
+- The optional focus view can group sections into tabs, but it should not overpower the first impression.
+- Keep the copy honest: do not invent finished case studies, metrics, testimonials, or tips.
+- Future field notes should come from real lived-through AI build lessons.
 
 ## Next Professional Move
-*   The mockup visual lane is **100% Complete**.
-*   The next step is to continue aligning with James Clark at work on any additional features or content updates (e.g. proof logs or section descriptions).
 
-## Runtime Details
-*   Run the static preview server: `npx http-server -p 8080 -c-1`
-*   Access the site locally at: `http://127.0.0.1:8080/index.html`
+Add real case-study content when available:
+
+- one clean screenshot or public-safe mock per project,
+- the real problem,
+- what James tried with Codex or Antigravity,
+- what broke or needed human judgment,
+- what proof exists,
+- what the next honest step is.

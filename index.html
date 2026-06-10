@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=1.0.1" />
+  <link rel="stylesheet" href="style.css?v=1.0.2" />
   <script src="assets/spotlight.js" defer></script>
   <script type="application/ld+json">
   {
@@ -121,9 +121,9 @@
     <div class="container nav-wrap">
       <a class="brand" href="#top">DevBuddy<span>James Clark</span></a>
       <nav class="nav">
-        <button id="view-mode-toggle" class="mode-toggle-btn" title="Toggle Layout View Mode">
-          <span class="mode-icon">⚡</span>
-          <span class="mode-label">Dashboard View</span>
+        <button id="view-mode-toggle" class="mode-toggle-btn" type="button" title="Toggle focused section view">
+          <span class="mode-icon" aria-hidden="true">View</span>
+          <span class="mode-label">Focus view</span>
         </button>
         <a href="#about">About</a>
         <a href="#featured-build">Featured</a>
@@ -137,10 +137,10 @@
 
   <nav class="dashboard-tabs" id="dashboard-tabs" aria-label="Dashboard views">
     <div class="tabs-container">
-      <button class="tab-btn active" data-tab="profile">👋 Profile</button>
-      <button class="tab-btn" data-tab="systems">⚙️ Systems Map</button>
-      <button class="tab-btn" data-tab="work">💻 Case Studies</button>
-      <button class="tab-btn" data-tab="lessons">📖 Notes &amp; Contact</button>
+      <button class="tab-btn active" data-tab="profile">Profile</button>
+      <button class="tab-btn" data-tab="systems">Systems Map</button>
+      <button class="tab-btn" data-tab="work">Case Studies</button>
+      <button class="tab-btn" data-tab="lessons">Notes &amp; Contact</button>
     </div>
   </nav>
 
@@ -276,11 +276,11 @@
           </div>
           <div class="flagship-media" aria-label="RDSCore real UI demo captures">
             <figure>
-              <img src="assets/portfolio-previews/rdscore-live-race-demo.png" alt="RDSCore live race dashboard demo screenshot" loading="lazy" decoding="async" />
+              <img src="assets/portfolio-previews/rdscore-live-race-demo.png" alt="RDSCore live race dashboard demo screenshot" loading="eager" decoding="async" fetchpriority="high" />
               <figcaption>Live race dashboard</figcaption>
             </figure>
             <figure>
-              <img src="assets/portfolio-previews/rdscore-priority-ticket-demo.png" alt="RDSCore priority action deck ticket demo screenshot" loading="lazy" decoding="async" />
+              <img src="assets/portfolio-previews/rdscore-priority-ticket-demo.png" alt="RDSCore priority action deck ticket demo screenshot" loading="eager" decoding="async" fetchpriority="high" />
               <figcaption>Priority action deck</figcaption>
             </figure>
           </div>
@@ -1161,11 +1161,11 @@
         });
       }
 
-      // --- ADHD Dashboard & View Mode Controller ---
+      // --- Focus View Controller ---
       const viewModeToggleBtn = document.getElementById('view-mode-toggle');
       const tabButtons = document.querySelectorAll('.tab-btn');
       
-      let viewMode = localStorage.getItem('viewMode') || 'dashboard'; // 'dashboard' or 'scroll'
+      let viewMode = localStorage.getItem('viewModeV2') || 'scroll'; // 'dashboard' or 'scroll'
       let activeTab = localStorage.getItem('activeTab') || 'profile';  // 'profile', 'systems', 'work', 'lessons'
       
       const sectionToTabMap = {
@@ -1184,19 +1184,19 @@
 
       const setViewMode = (mode) => {
         viewMode = mode;
-        localStorage.setItem('viewMode', mode);
+        localStorage.setItem('viewModeV2', mode);
         if (mode === 'dashboard') {
           document.body.classList.add('dashboard-mode');
           viewModeToggleBtn.classList.remove('scroll-active');
-          viewModeToggleBtn.querySelector('.mode-icon').innerText = '⚡';
-          viewModeToggleBtn.querySelector('.mode-label').innerText = 'Dashboard View';
+          viewModeToggleBtn.querySelector('.mode-icon').innerText = 'Exit';
+          viewModeToggleBtn.querySelector('.mode-label').innerText = 'Full page';
           setTab(activeTab, false); // Switch to active tab without scrolling
         } else {
           document.body.classList.remove('dashboard-mode');
           document.body.className = document.body.className.replace(/\btab-\S+/g, '');
           viewModeToggleBtn.classList.add('scroll-active');
-          viewModeToggleBtn.querySelector('.mode-icon').innerText = '📜';
-          viewModeToggleBtn.querySelector('.mode-label').innerText = 'Full Scroll';
+          viewModeToggleBtn.querySelector('.mode-icon').innerText = 'View';
+          viewModeToggleBtn.querySelector('.mode-label').innerText = 'Focus view';
           scrollSpy();
         }
       };
