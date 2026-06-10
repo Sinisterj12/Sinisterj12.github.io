@@ -3448,6 +3448,75 @@ body.dashboard-mode.tab-lessons main > section#contact {
   }
 }
 
+/* Visual de-duplication: Custom SVG Avatars */
+.avatar-emblem {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  flex: 0 0 auto;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.32) 0px 18px 34px, 0 0 16px rgba(57, 230, 212, 0.18);
+  background: rgba(15, 21, 31, 0.6);
+  border: 1px solid rgba(57, 230, 212, 0.25);
+  overflow: visible;
+  transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
+}
+
+.avatar-emblem:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: var(--cyan);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 22px 40px, 0 0 24px rgba(57, 230, 212, 0.35);
+}
+
+.emblem-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.contact-avatar-emblem {
+  position: relative;
+  width: 66px;
+  height: 66px;
+  flex: 0 0 auto;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 8px 20px, 0 0 12px rgba(255, 191, 95, 0.12);
+  background: rgba(15, 21, 31, 0.6);
+  border: 1px solid rgba(255, 191, 95, 0.22);
+  overflow: visible;
+  transition: transform 0.22s, border-color 0.22s, box-shadow 0.22s;
+}
+
+.contact-avatar-emblem:hover {
+  transform: scale(1.03);
+  border-color: var(--amber);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 24px, 0 0 18px rgba(255, 191, 95, 0.25);
+}
+
+/* Radar Scan Animation */
+@keyframes scanRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.scanning-circle {
+  transform-origin: center;
+  animation: scanRotate 8s linear infinite;
+}
+
+/* Tactile Spring Buttons */
+.tab-btn:active,
+.mode-toggle-btn:active,
+.filter-btn:active,
+.button:active {
+  transform: scale(0.96);
+  transition: transform 0.08s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
