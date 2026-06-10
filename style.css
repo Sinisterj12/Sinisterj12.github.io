@@ -3335,7 +3335,7 @@ a:focus-visible {
 .dashboard-tabs {
   position: sticky;
   top: 74px; /* site-header height */
-  z-index: 30;
+  z-index: 15;
   background: rgba(7, 11, 16, 0.85);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line);
@@ -3579,7 +3579,7 @@ body.has-spotlight .spotlight-glow {
 }
 
 /* Layer main content above spotlight */
-main, .site-header, .site-footer, .back-to-top, .dashboard-tabs {
+main, .site-footer {
   position: relative;
   z-index: 2;
 }
