@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <script src="assets/spotlight.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1164,8 +1165,8 @@
       const viewModeToggleBtn = document.getElementById('view-mode-toggle');
       const tabButtons = document.querySelectorAll('.tab-btn');
       
-      let viewMode = 'dashboard'; // 'dashboard' or 'scroll'
-      let activeTab = 'profile';  // 'profile', 'systems', 'work', 'lessons'
+      let viewMode = localStorage.getItem('viewMode') || 'dashboard'; // 'dashboard' or 'scroll'
+      let activeTab = localStorage.getItem('activeTab') || 'profile';  // 'profile', 'systems', 'work', 'lessons'
       
       const sectionToTabMap = {
         'about': 'profile',
@@ -1183,6 +1184,7 @@
 
       const setViewMode = (mode) => {
         viewMode = mode;
+        localStorage.setItem('viewMode', mode);
         if (mode === 'dashboard') {
           document.body.classList.add('dashboard-mode');
           viewModeToggleBtn.classList.remove('scroll-active');
@@ -1201,6 +1203,7 @@
 
       const setTab = (tabId, scroll = true) => {
         activeTab = tabId;
+        localStorage.setItem('activeTab', tabId);
         document.body.className = document.body.className.replace(/\btab-\S+/g, '');
         document.body.classList.add(`tab-${tabId}`);
         
@@ -1324,47 +1327,8 @@
         });
       }
 
-      // --- Spotlight Mouse-Cursor Glow Controller ---
-      if (window.matchMedia('(hover: hover)').matches) {
-        const spotlight = document.createElement('div');
-        spotlight.className = 'spotlight-glow';
-        document.body.appendChild(spotlight);
-
-        let targetX = 0;
-        let targetY = 0;
-        let currentX = 0;
-        let currentY = 0;
-        let isMoving = false;
-
-        window.addEventListener('mousemove', (e) => {
-          if (!isMoving) {
-            document.body.classList.add('has-spotlight');
-            isMoving = true;
-          }
-          targetX = e.clientX;
-          targetY = e.clientY;
-        });
-
-        window.addEventListener('mouseleave', () => {
-          document.body.classList.remove('has-spotlight');
-          isMoving = false;
-        });
-
-        const animateSpotlight = () => {
-          currentX += (targetX - currentX) * 0.12;
-          currentY += (targetY - currentY) * 0.12;
-          
-          spotlight.style.setProperty('--x', `${currentX}px`);
-          spotlight.style.setProperty('--y', `${currentY}px`);
-          
-          requestAnimationFrame(animateSpotlight);
-        };
-        
-        requestAnimationFrame(animateSpotlight);
-      }
-
       // Initialize defaults
-      setViewMode('dashboard');
+      setViewMode(viewMode);
       scrollSpy();
     });
   </script>
