@@ -639,11 +639,21 @@
           </div>
         </div>
 
+        <div class="project-filters-wrap">
+          <nav class="project-filters" aria-label="Filter projects">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="ai">AI & Vibe Coding</button>
+            <button class="filter-btn" data-filter="pos">POS & Payments</button>
+            <button class="filter-btn" data-filter="workspace">Workspace Automation</button>
+            <button class="filter-btn" data-filter="public">Public Repos</button>
+          </nav>
+        </div>
+
         <div class="case-study-grid" aria-label="Featured mini case studies">
-          <article class="case-study-card">
+          <article class="case-study-card filter-pos filter-public">
             <div class="case-study-head">
               <span class="project-type">Mini case study</span>
-              <span class="project-kind">Production stability</span>
+              <span class="project-kind"><span class="pulse-dot green" title="Live in Production"></span>Production stability</span>
             </div>
             <h3>PQManager</h3>
             <p class="case-study-summary">A narrow utility built after a recurring NCR virtual terminal print queue problem kept interrupting real operations.</p>
@@ -670,10 +680,10 @@
             </div>
           </article>
 
-          <article class="case-study-card">
+          <article class="case-study-card filter-workspace">
             <div class="case-study-head">
               <span class="project-type project-type-muted">Mini case study</span>
-              <span class="project-kind">After-hours alerting</span>
+              <span class="project-kind"><span class="pulse-dot green" title="Live in Production"></span>After-hours alerting</span>
             </div>
             <h3>Emergency Alert Workflow</h3>
             <p class="case-study-summary">A Google Apps Script and Chat workflow shaped around a real helpdesk accountability gap after hours.</p>
@@ -699,10 +709,10 @@
         </div>
 
         <div class="project-stack">
-          <article class="project-card internal-card feature-card-lite">
+          <article class="project-card internal-card feature-card-lite filter-ai">
             <div class="card-meta-row">
               <span class="project-type project-type-muted">Agent operations</span>
-              <span class="project-kind">Repo memory + guardrails</span>
+              <span class="project-kind"><span class="pulse-dot blue" title="Active Vibe-Coding Utility"></span>Repo memory + guardrails</span>
             </div>
             <h3>CodexSystem / AuditME</h3>
             <p>AuditME is my AI build operating layer: a repo-memory engine, verification gate, agent handoff system, and guardrail stack built to keep long sessions aligned. It helps agents resume context, document decisions, prove UI changes, catch lazy shortcuts, and move rough work toward a cleaner handoff.</p>
@@ -729,10 +739,10 @@
           </article>
 
           <div class="compact-project-grid">
-            <article class="project-card compact-project-card internal-card">
+            <article class="project-card compact-project-card internal-card filter-ai filter-workspace">
               <div class="card-meta-row">
                 <span class="project-type project-type-muted">Private prototype</span>
-                <span class="project-kind">Gmail case workspace</span>
+                <span class="project-kind"><span class="pulse-dot amber" title="Prototype Concept"></span>Gmail case workspace</span>
               </div>
               <h3>GThreads</h3>
               <p>A local-first Gmail case workspace for linking threads into named cases, adding notes, and turning messy inbox trails into structured support context without giving up operator control.</p>
@@ -746,10 +756,10 @@
               </div>
             </article>
 
-            <article class="project-card compact-project-card internal-card">
+            <article class="project-card compact-project-card internal-card filter-workspace">
               <div class="card-meta-row">
                 <span class="project-type project-type-muted">Private concept</span>
-                <span class="project-kind">Gmail filter command center</span>
+                <span class="project-kind"><span class="pulse-dot amber" title="Prototype Concept"></span>Gmail filter command center</span>
               </div>
               <h3>TeamSync</h3>
               <p>A manager-controlled Gmail filter sync system where a gold-standard rule set can be published, previewed, diffed, backed up, and safely applied by technicians.</p>
@@ -760,10 +770,10 @@
               </div>
             </article>
 
-            <article class="project-card compact-project-card internal-card">
+            <article class="project-card compact-project-card internal-card filter-ai">
               <div class="card-meta-row">
                 <span class="project-type project-type-muted">Private prototype</span>
-                <span class="project-kind">AI knowledge hub</span>
+                <span class="project-kind"><span class="pulse-dot amber" title="Prototype Concept"></span>AI knowledge hub</span>
               </div>
               <h3>RDSChat</h3>
               <p>A frontend foundation for an internal AI knowledge hub with model routing, streaming chat, multimodal inputs, OCR handling, persistent history, and a backend plan built around RAG against RDS knowledge.</p>
@@ -774,10 +784,10 @@
               </div>
             </article>
 
-            <article class="project-card compact-project-card internal-card">
+            <article class="project-card compact-project-card internal-card filter-pos">
               <div class="card-meta-row">
                 <span class="project-type project-type-muted">Private prototype</span>
-                <span class="project-kind">Scanner config workflow</span>
+                <span class="project-kind"><span class="pulse-dot amber" title="Prototype Concept"></span>Scanner config workflow</span>
               </div>
               <h3>RDS ScanFlow</h3>
               <p>A React and Firebase workflow for technicians to select scanner manufacturers, models, and modes, then display the barcode sequence needed to configure field hardware correctly.</p>
@@ -788,10 +798,10 @@
               </div>
             </article>
 
-            <article class="project-card compact-project-card internal-card">
+            <article class="project-card compact-project-card internal-card filter-pos">
               <div class="card-meta-row">
                 <span class="project-type project-type-muted">Private scaffold</span>
-                <span class="project-kind">Store data pipeline</span>
+                <span class="project-kind"><span class="pulse-dot amber" title="Prototype Concept"></span>Store data pipeline</span>
               </div>
               <h3>RDS Item Hub</h3>
               <p>A starter architecture for nightly store item-master exports, HTTPS ingest, manifests, selected-field CSV downloads, and a central portal for support staff and future warehouse workflows.</p>
@@ -802,10 +812,10 @@
               </div>
             </article>
 
-            <article class="project-card compact-project-card internal-card">
+            <article class="project-card compact-project-card internal-card filter-pos filter-ai">
               <div class="card-meta-row">
                 <span class="project-type project-type-muted">Private utility</span>
-                <span class="project-kind">Dev stack control deck</span>
+                <span class="project-kind"><span class="pulse-dot green" title="Live in Production"></span>Dev stack control deck</span>
               </div>
               <h3>Project Launcher</h3>
               <p>A Windows desktop launcher for starting, stopping, checking, and publicly exposing local dev stacks without burying the operator in fragile terminal commands.</p>
@@ -820,10 +830,10 @@
             </article>
           </div>
 
-          <article class="project-card feature-card">
+          <article class="project-card feature-card filter-pos filter-public">
             <div class="card-meta-row">
               <span class="project-type">Public repo</span>
-              <span class="project-kind">Diagnostics service</span>
+              <span class="project-kind"><span class="pulse-dot green" title="Live in Production"></span>Diagnostics service</span>
             </div>
             <h3>Gping</h3>
             <p>A Windows-first Go monitor for isolating whether payment trouble is local to the store network, part of the general internet path, or tied to the payment transaction path.</p>
@@ -847,10 +857,10 @@
             </div>
           </article>
 
-          <article class="project-card internal-card">
+          <article class="project-card internal-card filter-pos">
             <div class="card-meta-row">
               <span class="project-type project-type-muted">Private utility</span>
-              <span class="project-kind">Disk space recovery</span>
+              <span class="project-kind"><span class="pulse-dot green" title="Live in Production"></span>Disk space recovery</span>
             </div>
             <h3>GCleaner</h3>
             <p>An evidence-first Windows drive discovery and cleanup planning tool for store systems. The workflow focuses on showing what is consuming space, writing reviewable receipts, and avoiding cleanup until the plan is clear.</p>
@@ -861,10 +871,10 @@
             </div>
           </article>
 
-          <article class="project-card internal-card">
+          <article class="project-card internal-card filter-workspace">
             <div class="card-meta-row">
               <span class="project-type project-type-muted">Private workflow</span>
-              <span class="project-kind">Sheets OCR workflow</span>
+              <span class="project-kind"><span class="pulse-dot green" title="Live in Production"></span>Sheets OCR workflow</span>
             </div>
             <h3>Sales Order OCR Extraction</h3>
             <p>A Google Sheets and Apps Script workflow I built to extract sales orders from different source formats and turn them into a clean, structured output. The larger goal is to feed asset tracking, inventory visibility, and CRM build-out instead of letting sales order data die inside PDFs.</p>
@@ -1050,5 +1060,54 @@
       <a href="proof-log.html">Proof Log</a>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card, .case-study-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const filterValue = button.getAttribute('data-filter');
+
+          // Toggle active class on buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          // Filter cards with transitions
+          projectCards.forEach(card => {
+            if (filterValue === 'all' || card.classList.contains(`filter-${filterValue}`)) {
+              // Show card: remove is-hidden first, then force layout, then remove fade-out
+              if (card.classList.contains('is-hidden')) {
+                card.classList.remove('is-hidden');
+              }
+              // Force reflow/repaint to make transition work
+              void card.offsetWidth;
+              card.classList.remove('fade-out');
+            } else {
+              // Hide card: fade-out first, then add is-hidden after transition
+              card.classList.add('fade-out');
+              
+              // Handle hidden class after transition completes or immediately
+              const onTransitionEnd = (e) => {
+                if (e.propertyName === 'opacity' && card.classList.contains('fade-out')) {
+                  card.classList.add('is-hidden');
+                  card.removeEventListener('transitionend', onTransitionEnd);
+                }
+              };
+              card.addEventListener('transitionend', onTransitionEnd);
+              
+              // Fallback if transitions are disabled or fail
+              setTimeout(() => {
+                if (card.classList.contains('fade-out')) {
+                  card.classList.add('is-hidden');
+                }
+              }, 350);
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>

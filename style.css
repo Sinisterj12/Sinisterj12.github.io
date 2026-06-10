@@ -2967,6 +2967,176 @@ a:focus-visible {
   .button {
     width: 100%;
   }
+
+  /* Systems Map Mobile Timelines Collapse */
+  .systems-map-board {
+    grid-template-columns: 1fr !important;
+    padding: 16px !important;
+  }
+  .systems-map-board::before {
+    display: none !important;
+  }
+  .map-stage {
+    min-height: auto !important;
+    padding-left: 74px !important;
+  }
+  .map-stage span {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    width: 40px;
+    height: 40px;
+  }
+  .map-stage h3 {
+    margin-top: 0 !important;
+  }
+  .map-stage::after {
+    top: 18px !important;
+    right: 18px !important;
+  }
+}
+
+/* Premium Enhancements: Glassmorphism, Filters, Pulsing Dots */
+
+/* Glassmorphism */
+.project-card,
+.case-study-card,
+.driver-card,
+.workflow-card,
+.tool-cloud-panel,
+.now-building-panel,
+.capability-board,
+.scope-intro,
+.scope-metrics {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Card Hover Elevate & Accent Glow */
+.project-card,
+.case-study-card,
+.driver-card,
+.workflow-card,
+.detail-link-grid a {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.35s ease;
+}
+
+.project-card:hover,
+.case-study-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Project Filters */
+.project-filters-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 32px;
+}
+
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(15, 21, 31, 0.6);
+  border: 1px solid var(--line);
+}
+
+.filter-btn {
+  min-height: 38px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--text-soft);
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn.active {
+  color: #061017;
+  background: var(--cyan);
+  font-weight: 900;
+  box-shadow: 0 8px 20px rgba(57, 230, 212, 0.25);
+}
+
+/* Fade animation for project cards */
+.project-card.fade-out,
+.case-study-card.fade-out {
+  opacity: 0;
+  transform: scale(0.94) translateY(10px);
+  pointer-events: none;
+}
+
+.project-card.is-hidden,
+.case-study-card.is-hidden {
+  display: none !important;
+}
+
+/* Pulsing Status Indicators */
+.pulse-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(99, 230, 169, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(99, 230, 169, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(99, 230, 169, 0); }
+}
+
+@keyframes pulse-amber {
+  0% { box-shadow: 0 0 0 0 rgba(255, 191, 95, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 191, 95, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 191, 95, 0); }
+}
+
+@keyframes pulse-blue {
+  0% { box-shadow: 0 0 0 0 rgba(56, 164, 255, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(56, 164, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 164, 255, 0); }
+}
+
+.pulse-dot.green {
+  background: var(--green);
+  animation: pulse-green 2s infinite;
+}
+
+.pulse-dot.amber {
+  background: var(--amber);
+  animation: pulse-amber 2s infinite;
+}
+
+.pulse-dot.blue {
+  background: var(--blue);
+  animation: pulse-blue 2s infinite;
+}
+
+/* Tool Belt Hover Magnification & Glow */
+.tool-cloud span {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.22s, background 0.22s, color 0.22s;
+  cursor: default;
+}
+
+.tool-cloud span:hover {
+  transform: scale(1.06) translateY(-1px);
+  color: #fff;
+  background: rgba(57, 230, 212, 0.16) !important;
+  border-color: rgba(57, 230, 212, 0.5) !important;
+  box-shadow: 0 6px 14px rgba(57, 230, 212, 0.15);
 }
 
 @media (prefers-reduced-motion: reduce) {
