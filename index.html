@@ -647,6 +647,9 @@
             <button class="filter-btn" data-filter="workspace">Workspace Automation</button>
             <button class="filter-btn" data-filter="public">Public Repos</button>
           </nav>
+          <div class="project-search">
+            <input type="text" id="project-search-input" placeholder="Search stack, title, or keywords..." aria-label="Search projects" />
+          </div>
         </div>
 
         <div class="case-study-grid" aria-label="Featured mini case studies">
@@ -1061,51 +1064,116 @@
     </div>
   </footer>
 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">▲</button>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const filterButtons = document.querySelectorAll('.filter-btn');
       const projectCards = document.querySelectorAll('.project-card, .case-study-card');
+      const searchInput = document.getElementById('project-search-input');
+      
+      let activeFilter = 'all';
+      let searchQuery = '';
+
+      const updateProjects = () => {
+        projectCards.forEach(card => {
+          const matchesFilter = activeFilter === 'all' || card.classList.contains(`filter-${activeFilter}`);
+          const textContent = card.innerText.toLowerCase();
+          const matchesSearch = textContent.includes(searchQuery);
+
+          if (matchesFilter && matchesSearch) {
+            // Show card: remove is-hidden first, then force layout, then remove fade-out
+            if (card.classList.contains('is-hidden')) {
+              card.classList.remove('is-hidden');
+            }
+            // Force reflow/repaint to make transition work
+            void card.offsetWidth;
+            card.classList.remove('fade-out');
+          } else {
+            // Hide card: fade-out first, then add is-hidden after transition
+            card.classList.add('fade-out');
+            
+            // Handle hidden class after transition completes or immediately
+            const onTransitionEnd = (e) => {
+              if (e.propertyName === 'opacity' && card.classList.contains('fade-out')) {
+                card.classList.add('is-hidden');
+                card.removeEventListener('transitionend', onTransitionEnd);
+              }
+            };
+            card.addEventListener('transitionend', onTransitionEnd);
+            
+            // Fallback if transitions are disabled or fail
+            setTimeout(() => {
+              if (card.classList.contains('fade-out')) {
+                card.classList.add('is-hidden');
+              }
+            }, 350);
+          }
+        });
+      };
 
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-          const filterValue = button.getAttribute('data-filter');
+          activeFilter = button.getAttribute('data-filter');
 
           // Toggle active class on buttons
           filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
 
-          // Filter cards with transitions
-          projectCards.forEach(card => {
-            if (filterValue === 'all' || card.classList.contains(`filter-${filterValue}`)) {
-              // Show card: remove is-hidden first, then force layout, then remove fade-out
-              if (card.classList.contains('is-hidden')) {
-                card.classList.remove('is-hidden');
-              }
-              // Force reflow/repaint to make transition work
-              void card.offsetWidth;
-              card.classList.remove('fade-out');
-            } else {
-              // Hide card: fade-out first, then add is-hidden after transition
-              card.classList.add('fade-out');
-              
-              // Handle hidden class after transition completes or immediately
-              const onTransitionEnd = (e) => {
-                if (e.propertyName === 'opacity' && card.classList.contains('fade-out')) {
-                  card.classList.add('is-hidden');
-                  card.removeEventListener('transitionend', onTransitionEnd);
-                }
-              };
-              card.addEventListener('transitionend', onTransitionEnd);
-              
-              // Fallback if transitions are disabled or fail
-              setTimeout(() => {
-                if (card.classList.contains('fade-out')) {
-                  card.classList.add('is-hidden');
-                }
-              }, 350);
-            }
-          });
+          updateProjects();
         });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        updateProjects();
+      });
+
+      // Scroll Spy for Header navigation
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav a:not(.nav-cta)');
+
+      const scrollSpy = () => {
+        let currentSection = '';
+        const scrollPosition = window.pageYOffset + 120; // Offset to account for sticky header
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+
+        // Fallback for bottom of the page
+        if ((window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight - 60) {
+          currentSection = 'contact';
+        }
+
+        navLinks.forEach(link => {
+          link.classList.remove('active-link');
+          const href = link.getAttribute('href');
+          if (href && href.includes(currentSection) && currentSection !== '') {
+            link.classList.add('active-link');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', scrollSpy);
+      scrollSpy(); // Run initially
+
+      // Back to Top Button Actions
+      const backToTopBtn = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
   </script>
