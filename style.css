@@ -3294,6 +3294,160 @@ a:focus-visible {
   }
 }
 
+/* View Mode Selector in Header */
+.mode-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  background: rgba(15, 21, 31, 0.65);
+  border: 1px solid rgba(57, 230, 212, 0.28);
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--cyan);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-shadow: 0 0 10px rgba(57, 230, 212, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.mode-toggle-btn:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 16px rgba(57, 230, 212, 0.32);
+  transform: translateY(-1px);
+}
+
+.mode-toggle-btn.scroll-active {
+  border-color: rgba(255, 191, 95, 0.28);
+  color: var(--amber);
+  box-shadow: 0 0 10px rgba(255, 191, 95, 0.08);
+}
+
+.mode-toggle-btn.scroll-active:hover {
+  border-color: var(--amber);
+  box-shadow: 0 0 16px rgba(255, 191, 95, 0.32);
+}
+
+/* Dashboard Tab Navigation Bar */
+.dashboard-tabs {
+  position: sticky;
+  top: 74px; /* site-header height */
+  z-index: 30;
+  background: rgba(7, 11, 16, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  display: none;
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+body.dashboard-mode .dashboard-tabs {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.tabs-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.tab-btn {
+  background: rgba(15, 21, 31, 0.6);
+  border: 1px solid var(--line);
+  padding: 8px 18px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.22s ease;
+}
+
+.tab-btn:hover {
+  color: var(--text);
+  border-color: rgba(57, 230, 212, 0.4);
+  background: rgba(57, 230, 212, 0.02);
+}
+
+.tab-btn.active {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: rgba(57, 230, 212, 0.08);
+  box-shadow: 0 0 14px rgba(57, 230, 212, 0.18);
+}
+
+/* Section Show/Hide logic for Dashboard Mode */
+body.dashboard-mode main > section {
+  display: none !important; /* Hide sections in main by default */
+}
+
+/* Show only sections belonging to the active tab */
+body.dashboard-mode.tab-profile main > section.hero,
+body.dashboard-mode.tab-profile main > section.profile-signal-section,
+body.dashboard-mode.tab-profile main > section#about,
+body.dashboard-mode.tab-profile main > section#scope {
+  display: block !important;
+  animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.dashboard-mode.tab-systems main > section#systems-map,
+body.dashboard-mode.tab-systems main > section#tools,
+body.dashboard-mode.tab-systems main > section#arsenal {
+  display: block !important;
+  animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.dashboard-mode.tab-work main > section#featured-build,
+body.dashboard-mode.tab-work main > section#projects,
+body.dashboard-mode.tab-work main > section#principles {
+  display: block !important;
+  animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.dashboard-mode.tab-lessons main > section#field-notes,
+body.dashboard-mode.tab-lessons main > section#fit,
+body.dashboard-mode.tab-lessons main > section#contact {
+  display: block !important;
+  animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .mode-toggle-btn {
+    width: 100%;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

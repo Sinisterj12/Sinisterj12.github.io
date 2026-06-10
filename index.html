@@ -120,6 +120,10 @@
     <div class="container nav-wrap">
       <a class="brand" href="#top">DevBuddy<span>James Clark</span></a>
       <nav class="nav">
+        <button id="view-mode-toggle" class="mode-toggle-btn" title="Toggle Layout View Mode">
+          <span class="mode-icon">⚡</span>
+          <span class="mode-label">Dashboard View</span>
+        </button>
         <a href="#about">About</a>
         <a href="#featured-build">Featured</a>
         <a href="#arsenal">Stack</a>
@@ -129,6 +133,15 @@
       </nav>
     </div>
   </header>
+
+  <nav class="dashboard-tabs" id="dashboard-tabs" aria-label="Dashboard views">
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="profile">👋 Profile</button>
+      <button class="tab-btn" data-tab="systems">⚙️ Systems Map</button>
+      <button class="tab-btn" data-tab="work">💻 Case Studies</button>
+      <button class="tab-btn" data-tab="lessons">📖 Notes &amp; Contact</button>
+    </div>
+  </nav>
 
   <main id="top">
     <section class="hero">
@@ -1082,18 +1095,13 @@
           const matchesSearch = textContent.includes(searchQuery);
 
           if (matchesFilter && matchesSearch) {
-            // Show card: remove is-hidden first, then force layout, then remove fade-out
             if (card.classList.contains('is-hidden')) {
               card.classList.remove('is-hidden');
             }
-            // Force reflow/repaint to make transition work
             void card.offsetWidth;
             card.classList.remove('fade-out');
           } else {
-            // Hide card: fade-out first, then add is-hidden after transition
             card.classList.add('fade-out');
-            
-            // Handle hidden class after transition completes or immediately
             const onTransitionEnd = (e) => {
               if (e.propertyName === 'opacity' && card.classList.contains('fade-out')) {
                 card.classList.add('is-hidden');
@@ -1101,8 +1109,6 @@
               }
             };
             card.addEventListener('transitionend', onTransitionEnd);
-            
-            // Fallback if transitions are disabled or fail
             setTimeout(() => {
               if (card.classList.contains('fade-out')) {
                 card.classList.add('is-hidden');
@@ -1115,18 +1121,116 @@
       filterButtons.forEach(button => {
         button.addEventListener('click', () => {
           activeFilter = button.getAttribute('data-filter');
-
-          // Toggle active class on buttons
           filterButtons.forEach(btn => btn.classList.remove('active'));
           button.classList.add('active');
-
           updateProjects();
         });
       });
 
-      searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase().trim();
-        updateProjects();
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          updateProjects();
+        });
+      }
+
+      // --- ADHD Dashboard & View Mode Controller ---
+      const viewModeToggleBtn = document.getElementById('view-mode-toggle');
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      
+      let viewMode = 'dashboard'; // 'dashboard' or 'scroll'
+      let activeTab = 'profile';  // 'profile', 'systems', 'work', 'lessons'
+      
+      const sectionToTabMap = {
+        'about': 'profile',
+        'scope': 'profile',
+        'systems-map': 'systems',
+        'tools': 'systems',
+        'arsenal': 'systems',
+        'featured-build': 'work',
+        'projects': 'work',
+        'principles': 'work',
+        'field-notes': 'lessons',
+        'fit': 'lessons',
+        'contact': 'lessons'
+      };
+
+      const setViewMode = (mode) => {
+        viewMode = mode;
+        if (mode === 'dashboard') {
+          document.body.classList.add('dashboard-mode');
+          viewModeToggleBtn.classList.remove('scroll-active');
+          viewModeToggleBtn.querySelector('.mode-icon').innerText = '⚡';
+          viewModeToggleBtn.querySelector('.mode-label').innerText = 'Dashboard View';
+          setTab(activeTab, false); // Switch to active tab without scrolling
+        } else {
+          document.body.classList.remove('dashboard-mode');
+          document.body.className = document.body.className.replace(/\btab-\S+/g, '');
+          viewModeToggleBtn.classList.add('scroll-active');
+          viewModeToggleBtn.querySelector('.mode-icon').innerText = '📜';
+          viewModeToggleBtn.querySelector('.mode-label').innerText = 'Full Scroll';
+          scrollSpy();
+        }
+      };
+
+      const setTab = (tabId, scroll = true) => {
+        activeTab = tabId;
+        document.body.className = document.body.className.replace(/\btab-\S+/g, '');
+        document.body.classList.add(`tab-${tabId}`);
+        
+        tabButtons.forEach(btn => {
+          if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+        
+        if (scroll) {
+          const topElement = document.getElementById('dashboard-tabs') || document.getElementById('top');
+          if (topElement) {
+            const topPosition = topElement.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: topPosition, behavior: 'smooth' });
+          }
+        }
+        
+        // Update header active links
+        scrollSpy();
+      };
+
+      if (viewModeToggleBtn) {
+        viewModeToggleBtn.addEventListener('click', () => {
+          setViewMode(viewMode === 'dashboard' ? 'scroll' : 'dashboard');
+        });
+      }
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          setTab(btn.getAttribute('data-tab'));
+        });
+      });
+
+      // Global click delegator for hashes/internal links
+      document.addEventListener('click', (e) => {
+        const anchor = e.target.closest('a');
+        if (anchor) {
+          const href = anchor.getAttribute('href');
+          if (href && href.startsWith('#') && href !== '#top') {
+            const targetId = href.substring(1);
+            const targetTab = sectionToTabMap[targetId];
+            if (viewMode === 'dashboard' && targetTab) {
+              e.preventDefault();
+              setTab(targetTab, false);
+              setTimeout(() => {
+                const section = document.getElementById(targetId);
+                if (section) {
+                  const scrollOffset = section.getBoundingClientRect().top + window.pageYOffset - 130;
+                  window.scrollTo({ top: scrollOffset, behavior: 'smooth' });
+                }
+              }, 120);
+            }
+          }
+        }
       });
 
       // Scroll Spy for Header navigation
@@ -1134,8 +1238,26 @@
       const navLinks = document.querySelectorAll('.nav a:not(.nav-cta)');
 
       const scrollSpy = () => {
+        if (viewMode === 'dashboard') {
+          // Set active nav link based on active tab
+          let activeSection = '';
+          if (activeTab === 'profile') activeSection = 'about';
+          else if (activeTab === 'systems') activeSection = 'arsenal';
+          else if (activeTab === 'work') activeSection = 'projects';
+          else if (activeTab === 'lessons') activeSection = 'contact';
+          
+          navLinks.forEach(link => {
+            link.classList.remove('active-link');
+            const href = link.getAttribute('href');
+            if (href && href.includes(activeSection)) {
+              link.classList.add('active-link');
+            }
+          });
+          return;
+        }
+
         let currentSection = '';
-        const scrollPosition = window.pageYOffset + 120; // Offset to account for sticky header
+        const scrollPosition = window.pageYOffset + 120;
 
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
@@ -1145,7 +1267,6 @@
           }
         });
 
-        // Fallback for bottom of the page
         if ((window.innerHeight + window.pageYOffset) >= document.documentElement.scrollHeight - 60) {
           currentSection = 'contact';
         }
@@ -1160,21 +1281,26 @@
       };
 
       window.addEventListener('scroll', scrollSpy);
-      scrollSpy(); // Run initially
-
+      
       // Back to Top Button Actions
       const backToTopBtn = document.getElementById('back-to-top');
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 500) {
-          backToTopBtn.classList.add('show');
-        } else {
-          backToTopBtn.classList.remove('show');
-        }
-      });
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 500) {
+            backToTopBtn.classList.add('show');
+          } else {
+            backToTopBtn.classList.remove('show');
+          }
+        });
 
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Initialize defaults
+      setViewMode('dashboard');
+      scrollSpy();
     });
   </script>
 </body>
