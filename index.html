@@ -1330,6 +1330,23 @@
       // Initialize defaults
       setViewMode(viewMode);
       scrollSpy();
+
+      // Handle initial hash landing with sticky offset
+      if (window.location.hash) {
+        const hashId = window.location.hash.substring(1);
+        const section = document.getElementById(hashId);
+        if (section) {
+          const targetTab = sectionToTabMap[hashId];
+          if (viewMode === 'dashboard' && targetTab) {
+            setTab(targetTab, false);
+          }
+          setTimeout(() => {
+            const offset = viewMode === 'dashboard' ? 140 : 80;
+            const scrollOffset = section.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: scrollOffset, behavior: 'auto' });
+          }, 150);
+        }
+      }
     });
   </script>
 </body>
