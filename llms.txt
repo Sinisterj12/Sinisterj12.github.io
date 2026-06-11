@@ -1,0 +1,69 @@
+# James Clark (DevBuddy)
+
+James Clark is a Technical Support Manager, POS Operations Lead, and Vibe Coder who designs, builds, and deploys custom operations software, helpdesk integrations, and diagnostic utilities. 
+
+This file serves as a high-density, LLM-friendly index of his profile, project catalog, and technical competencies.
+
+- **Portfolio Website:** [https://sinisterj12.github.io/](https://sinisterj12.github.io/)
+- **GitHub Profile:** [https://github.com/Sinisterj12](https://github.com/Sinisterj12)
+- **Primary Contact:** [pctechclark@gmail.com](mailto:pctechclark@gmail.com)
+
+---
+
+## 🛠️ Technical Competencies & Toolbelt
+
+- **Languages:** Python, Go, JavaScript/HTML/CSS, PowerShell
+- **Backend & APIs:** FastAPI, REST APIs, JSON APIs, Google Workspace APIs (Gmail, Sheets, Drive)
+- **Desktop & UI:** PySide6 (Qt for Python), Vanilla CSS/JS
+- **Infrastructure & Deployment:** Cloudflare (Workers, Pages), GitHub Pages, Windows Environment (registry, print queues)
+- **Agentic & AI Build Systems:** Codex App, Antigravity SDK, custom agent memory/closeout protocols
+- **Specialized Domains:** Retail POS architectures (NCR/Virtual Terminals), payment diagnostics, support ticket workflows, graph-style store relationship maps
+
+---
+
+## 🚀 Case Studies & Systems Map
+
+### 1. [RDSCore CRM Workspace](https://sinisterj12.github.io/projects/rdscore.html)
+- **Type:** Private CRM wrapper & support operations concept
+- **Core Stack:** FastAPI, NetworkX, search-first data mapping
+- **Problem:** Support context, stores, assets, vendor references, and ticket histories are fragmented during live escalations.
+- **Solution:** A unified dashboard presenting store nodes, ticket momentum boards, active status signals, and graph-style network diagnostics.
+
+### 2. [AuditME / CodexSystem](https://sinisterj12.github.io/projects/auditme-codexsystem.html)
+- **Type:** Developer operations & agent memory workflow
+- **Core Stack:** Local filesystem hooks, task/continuation manifests, verification templates
+- **Problem:** Long AI-assisted development sessions drift, lose context, skip runtime verification, or create messy handoffs.
+- **Solution:** A checklist-driven, review-laddered checkpoint system that tracks manual/automated verification receipts and maintains repository state continuity.
+
+### 3. [GThreads Case Workspace](https://sinisterj12.github.io/projects/gthreads.html)
+- **Type:** Local-first email support organizer
+- **Core Stack:** Gmail API, local storage cache
+- **Problem:** Complex client escalations are buried inside long, unorganized Gmail threads and forwarded tickets.
+- **Solution:** Intercepts and overlays support threads into structured cases with inline operator notes and custom status indicators.
+
+### 4. [Project Launcher](https://sinisterj12.github.io/projects/project-launcher.html)
+- **Type:** Desktop control console for local runtimes
+- **Core Stack:** PySide6, Cloudflare tunnels, status telemetry checks
+- **Problem:** Managing start, check, tunnel exposure, and stop commands for multiple local projects in raw terminal shells is error-prone.
+- **Solution:** A clean Windows desktop launcher that handles local servers, monitors health endpoints, manages public sharing states, and ensures absolute cleanup.
+
+---
+
+## 📦 Open-Source & Public Repositories
+
+### 1. [PQManager](https://github.com/Sinisterj12/PQManager)
+- **URL:** [https://github.com/Sinisterj12/PQManager](https://github.com/Sinisterj12/PQManager)
+- **Role:** Tray-based Windows print queue stabilizer
+- **Details:** Built to solve NCR virtual terminal print spooler freezes in live, high-pressure retail registers. Monitors and automatically resets queue pipelines without requiring full POS reboots.
+
+### 2. [Gping](https://github.com/Sinisterj12/Gping)
+- **URL:** [https://github.com/Sinisterj12/Gping](https://github.com/Sinisterj12/Gping)
+- **Role:** High-performance network diagnostic utility
+- **Details:** Evolving Go-based daemon and console interface shaped for local payment gateway availability diagnostics.
+
+---
+
+## 📝 Proof Log & Build Journals
+
+### [Proof Log](https://sinisterj12.github.io/proof-log.html)
+- **Details:** The chronological build log containing verification runs, Lighthouse scores, mobile layout fixes, and lessons learned while building other support systems.
