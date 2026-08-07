@@ -1,6 +1,6 @@
 # James Clark — Applied AI Workflows, Agent Systems & Operations
 
-James Clark is a Technical Support Manager / POS Operations Lead and applied AI builder focused on practical AI deployment, workflow design, agent operations, human-in-the-loop systems, verification, and internal tools shaped by real operational environments.
+James Clark is a Technical Support Manager / POS Operations Lead and applied AI builder focused on practical AI deployment, workflow design, agent operations, human-in-the-loop systems, graph-based operational context, verification, and internal tools shaped by real operational environments.
 
 Primary portfolio: https://sinisterj12.github.io/
 GitHub: https://github.com/Sinisterj12
@@ -13,21 +13,22 @@ Contact: pctechclark@gmail.com
 - Agent operations and long-session reliability
 - Human-in-the-loop authority boundaries
 - AI verification, evidence, and evaluation thinking
+- Graph-based operational context and search
 - Technical support and customer implementation
 - Internal AI tooling
-- Google Workspace automation
+- Google Workspace-heavy operator workflows
 - Retail POS and payment operations
 
 ## Operating principles
 
 1. Human authority: consequential decisions remain under explicit human control.
 2. Evidence over confidence: runtime results, screenshots, files, tests, Git state, and user confirmation outrank model claims.
-3. Context before intelligence: trustworthy retrieval, state, and source boundaries come before model reasoning.
+3. Context before intelligence: trustworthy retrieval, relationships, state, and source boundaries come before model reasoning.
 4. Least necessary autonomy: agents receive only the authority required for the workflow.
 5. Visible failure paths: uncertainty, tool errors, missing context, and partial execution should surface clearly.
 6. Durable handoffs: important state must survive the individual chat or agent session.
 
-## Selected case studies
+## Selected systems
 
 ### AuditME / CodexSystem
 https://sinisterj12.github.io/projects/auditme-codexsystem.html
@@ -37,17 +38,13 @@ AI reliability and agent-operations workflow for durable repository context, ver
 https://sinisterj12.github.io/projects/manager.html
 Human-controlled AI project management system focused on durable context, useful next actions, evidence-backed progress, explicit uncertainty, and a strict distinction between model assistance and human authority.
 
+### WorkDock
+https://sinisterj12.github.io/projects/workdock.html
+Windows-first Google Workspace command center used as a private daily-driver. It combines Gmail, Sheets, Docs, Drive, Calendar, Meet, Chat, local files, Google Drive destinations, and context-aware notes while keeping session, privacy, and data-capture boundaries explicit.
+
 ### RDSCore
 https://sinisterj12.github.io/projects/rdscore.html
-Search-first support operations workspace shaped by live helpdesk pressure. Trustworthy context, ticket ownership, store relationships, and support history come before selective AI interpretation.
-
-### GThreads
-https://sinisterj12.github.io/projects/gthreads.html
-Local-first Gmail case workspace that adds structured support context, named cases, notes, and optional AI assistance without replacing the source inbox or human operator.
-
-### Project Launcher
-https://sinisterj12.github.io/projects/project-launcher.html
-Windows desktop control surface for local development stacks, visible runtime state, deliberate public tunnel exposure, and reversible operator actions.
+Search-first support operations workspace shaped by live helpdesk pressure. A graph-backed context layer connects organizations, stores, tickets, contacts, and ownership so retrieval and AI assistance can work from relationships instead of disconnected records.
 
 ## Public repositories
 
@@ -63,7 +60,8 @@ Go-based network diagnostics work shaped by payment and support troubleshooting 
 
 AI and agents: ChatGPT, OpenAI Codex, Gemini, Vertex AI, NotebookLM
 AI operations: prompt systems, durable instructions, repo memory, verification, handoffs, closeouts, guardrails
-Google: Gmail, Drive, Sheets, Apps Script, Firebase
+Context and relationships: NetworkX, graph models, search-first design, operational memory
+Google: Gmail, Drive, Sheets, Calendar, Workspace
 Applications: Python, FastAPI, React, TypeScript, Go
 Operations: GitHub, Playwright, PowerShell, Cloudflare, Windows
 Domain: POS, payments, PCI/QIR, helpdesk, retail operations
