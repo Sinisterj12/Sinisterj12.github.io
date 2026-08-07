@@ -1,69 +1,72 @@
-# James Clark (DevBuddy)
+# James Clark — Applied AI Workflows, Agent Systems & Operations
 
-James Clark is a Technical Support Manager, POS Operations Lead, and Vibe Coder who designs, builds, and deploys custom operations software, helpdesk integrations, and diagnostic utilities. 
+James Clark is a Technical Support Manager / POS Operations Lead and applied AI builder focused on practical AI deployment, workflow design, agent operations, human-in-the-loop systems, graph-based operational context, verification, and internal tools shaped by real operational environments.
 
-This file serves as a high-density, LLM-friendly index of his profile, project catalog, and technical competencies.
+Primary portfolio: https://sinisterj12.github.io/
+GitHub: https://github.com/Sinisterj12
+Contact: pctechclark@gmail.com
 
-- **Portfolio Website:** [https://sinisterj12.github.io/](https://sinisterj12.github.io/)
-- **GitHub Profile:** [https://github.com/Sinisterj12](https://github.com/Sinisterj12)
-- **Primary Contact:** [pctechclark@gmail.com](mailto:pctechclark@gmail.com)
+## Professional focus
 
----
+- Applied AI workflow design
+- AI deployment and enablement
+- Agent operations and long-session reliability
+- Human-in-the-loop authority boundaries
+- AI verification, evidence, and evaluation thinking
+- Graph-based operational context and search
+- Technical support and customer implementation
+- Internal AI tooling
+- Google Workspace-heavy operator workflows
+- Retail POS and payment operations
 
-## 🛠️ Technical Competencies & Toolbelt
+## Operating principles
 
-- **Languages:** Python, Go, JavaScript/HTML/CSS, PowerShell
-- **Backend & APIs:** FastAPI, REST APIs, JSON APIs, Google Workspace APIs (Gmail, Sheets, Drive)
-- **Desktop & UI:** PySide6 (Qt for Python), Vanilla CSS/JS
-- **Infrastructure & Deployment:** Cloudflare (Workers, Pages), GitHub Pages, Windows Environment (registry, print queues)
-- **Agentic & AI Build Systems:** Codex App, Antigravity SDK, custom agent memory/closeout protocols
-- **Specialized Domains:** Retail POS architectures (NCR/Virtual Terminals), payment diagnostics, support ticket workflows, graph-style store relationship maps
+1. Human authority: consequential decisions remain under explicit human control.
+2. Evidence over confidence: runtime results, screenshots, files, tests, Git state, and user confirmation outrank model claims.
+3. Context before intelligence: trustworthy retrieval, relationships, state, and source boundaries come before model reasoning.
+4. Least necessary autonomy: agents receive only the authority required for the workflow.
+5. Visible failure paths: uncertainty, tool errors, missing context, and partial execution should surface clearly.
+6. Durable handoffs: important state must survive the individual chat or agent session.
 
----
+## Selected systems
 
-## 🚀 Case Studies & Systems Map
+### AuditME / CodexSystem
+https://sinisterj12.github.io/projects/auditme-codexsystem.html
+AI reliability and agent-operations workflow for durable repository context, verification receipts, branch discipline, closeout gates, and clean handoffs between long AI-assisted build sessions.
 
-### 1. [RDSCore CRM Workspace](https://sinisterj12.github.io/projects/rdscore.html)
-- **Type:** Private CRM wrapper & support operations concept
-- **Core Stack:** FastAPI, NetworkX, search-first data mapping
-- **Problem:** Support context, stores, assets, vendor references, and ticket histories are fragmented during live escalations.
-- **Solution:** A unified dashboard presenting store nodes, ticket momentum boards, active status signals, and graph-style network diagnostics.
+### Manager
+https://sinisterj12.github.io/projects/manager.html
+Human-controlled AI project management system focused on durable context, useful next actions, evidence-backed progress, explicit uncertainty, and a strict distinction between model assistance and human authority.
 
-### 2. [AuditME / CodexSystem](https://sinisterj12.github.io/projects/auditme-codexsystem.html)
-- **Type:** Developer operations & agent memory workflow
-- **Core Stack:** Local filesystem hooks, task/continuation manifests, verification templates
-- **Problem:** Long AI-assisted development sessions drift, lose context, skip runtime verification, or create messy handoffs.
-- **Solution:** A checklist-driven, review-laddered checkpoint system that tracks manual/automated verification receipts and maintains repository state continuity.
+### WorkDock
+https://sinisterj12.github.io/projects/workdock.html
+Windows-first Google Workspace command center used as a private daily-driver. It combines Gmail, Sheets, Docs, Drive, Calendar, Meet, Chat, local files, Google Drive destinations, and context-aware notes while keeping session, privacy, and data-capture boundaries explicit.
 
-### 3. [GThreads Case Workspace](https://sinisterj12.github.io/projects/gthreads.html)
-- **Type:** Local-first email support organizer
-- **Core Stack:** Gmail API, local storage cache
-- **Problem:** Complex client escalations are buried inside long, unorganized Gmail threads and forwarded tickets.
-- **Solution:** Intercepts and overlays support threads into structured cases with inline operator notes and custom status indicators.
+### RDSCore
+https://sinisterj12.github.io/projects/rdscore.html
+Search-first support operations workspace shaped by live helpdesk pressure. A graph-backed context layer connects organizations, stores, tickets, contacts, and ownership so retrieval and AI assistance can work from relationships instead of disconnected records.
 
-### 4. [Project Launcher](https://sinisterj12.github.io/projects/project-launcher.html)
-- **Type:** Desktop control console for local runtimes
-- **Core Stack:** PySide6, Cloudflare tunnels, status telemetry checks
-- **Problem:** Managing start, check, tunnel exposure, and stop commands for multiple local projects in raw terminal shells is error-prone.
-- **Solution:** A clean Windows desktop launcher that handles local servers, monitors health endpoints, manages public sharing states, and ensures absolute cleanup.
+## Public repositories
 
----
+### PQManager
+https://github.com/Sinisterj12/PQManager
+Windows utility shaped by real NCR virtual-terminal print queue stability problems in retail support environments.
 
-## 📦 Open-Source & Public Repositories
+### Gping
+https://github.com/Sinisterj12/Gping
+Go-based network diagnostics work shaped by payment and support troubleshooting needs.
 
-### 1. [PQManager](https://github.com/Sinisterj12/PQManager)
-- **URL:** [https://github.com/Sinisterj12/PQManager](https://github.com/Sinisterj12/PQManager)
-- **Role:** Tray-based Windows print queue stabilizer
-- **Details:** Built to solve NCR virtual terminal print spooler freezes in live, high-pressure retail registers. Monitors and automatically resets queue pipelines without requiring full POS reboots.
+## Working stack
 
-### 2. [Gping](https://github.com/Sinisterj12/Gping)
-- **URL:** [https://github.com/Sinisterj12/Gping](https://github.com/Sinisterj12/Gping)
-- **Role:** High-performance network diagnostic utility
-- **Details:** Evolving Go-based daemon and console interface shaped for local payment gateway availability diagnostics.
+AI and agents: ChatGPT, OpenAI Codex, Gemini, Vertex AI, NotebookLM
+AI operations: prompt systems, durable instructions, repo memory, verification, handoffs, closeouts, guardrails
+Context and relationships: NetworkX, graph models, search-first design, operational memory
+Google: Gmail, Drive, Sheets, Calendar, Workspace
+Applications: Python, FastAPI, React, TypeScript, Go
+Operations: GitHub, Playwright, PowerShell, Cloudflare, Windows
+Domain: POS, payments, PCI/QIR, helpdesk, retail operations
 
----
+## Proof
 
-## 📝 Proof Log & Build Journals
-
-### [Proof Log](https://sinisterj12.github.io/proof-log.html)
-- **Details:** The chronological build log containing verification runs, Lighthouse scores, mobile layout fixes, and lessons learned while building other support systems.
+Proof Log: https://sinisterj12.github.io/proof-log.html
+The Proof Log records public-safe verification, runtime checks, repository state, screenshots, and project build notes.

@@ -3,137 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AuditME / CodexSystem | James Clark DevBuddy</title>
-  <meta name="description" content="AuditME and CodexSystem are James Clark's AI build operating layer for repo memory, verification receipts, agent handoffs, closeout gates, and long-session continuation." />
+  <title>AuditME / CodexSystem — AI Reliability & Agent Operations | James Clark</title>
+  <meta name="description" content="AuditME / CodexSystem is James Clark's AI reliability and agent-operations layer for durable context, verification receipts, handoffs, closeout gates, and evidence-driven AI-assisted work." />
   <meta name="author" content="James Clark" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://sinisterj12.github.io/projects/auditme-codexsystem.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="AuditME / CodexSystem | James Clark DevBuddy" />
-  <meta property="og:description" content="Agent operations layer for AI-assisted software work, repo memory, verification receipts, and clean handoff." />
-  <meta property="og:url" content="https://sinisterj12.github.io/projects/auditme-codexsystem.html" />
-  <meta property="og:image" content="https://sinisterj12.github.io/assets/james-clark-brainstorming.jpg" />
-  <link rel="icon" type="image/jpeg" href="../assets/james-clark-brainstorming.jpg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta property="og:title" content="AuditME / CodexSystem — AI Reliability & Agent Operations | James Clark" />
+  <meta property="og:description" content="Agent operations, durable context, verification, handoffs and guardrails for long AI-assisted build sessions." />
+  <meta property="og:image" content="https://sinisterj12.github.io/assets/portfolio-previews/auditme-preview.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css" />
-  <script src="../assets/spotlight.js" defer></script>
+  <link rel="stylesheet" href="../v2.css" />
 </head>
 <body>
-  <a class="skip-link" href="#top">Skip to main content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html#top">DevBuddy<span>James Clark</span></a>
-      <nav class="nav">
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#tools">Tools</a>
-        <a href="../index.html#projects">Projects</a>
-        <a href="../proof-log.html">Proof Log</a>
-        <a class="nav-cta" href="../index.html#contact">Contact</a>
-      </nav>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html">James Clark <small>DevBuddy</small></a><nav class="nav" aria-label="Primary navigation"><a href="../index.html#approach">AI Approach</a><a href="../index.html#work">Case Studies</a><a href="../proof-log.html">Proof</a><a class="nav-cta" href="mailto:pctechclark@gmail.com">Contact</a></nav></div></header>
+<main id="main" class="detail-main">
+  <section class="detail-hero"><div class="container"><a class="crumb" href="../index.html#work">← Back to case studies</a><p class="kicker">AI reliability · agent operations</p><h1>AuditME / CodexSystem</h1><p class="lede">An operating layer for AI-assisted software work that treats drift, forgotten context, weak verification and misleading completion claims as system-design problems—not things to solve with more trust in the model.</p><div class="detail-meta"><span>Agent operations</span><span>Durable context</span><span>Verification receipts</span><span>Handoff control</span><span>Closeout gates</span></div></div></section>
+  <section class="section"><div class="container detail-grid">
+    <div class="detail-stack">
+      <article class="detail-card"><p class="section-kicker">Problem</p><h2>Fast AI sessions can create invisible operational debt.</h2><p>Long sessions can drift from the original objective, lose decisions that existed only in chat, skip runtime proof, leave a repository in an unclear state, or hand the next agent an incomplete story. The risk is not only wrong code. It is losing the ability to tell what actually happened.</p></article>
+      <article class="detail-card"><p class="section-kicker">System direction</p><h2>Make AI work inspectable and resumable.</h2><p>AuditME / CodexSystem uses repository instructions, compact continuation state, task lanes, explicit verification receipts, branch discipline and closeout checks to create durable truth outside the conversation. The aim is to let another human or agent resume from evidence instead of reconstructing intent from memory.</p></article>
+      <article class="detail-card"><p class="section-kicker">Failure modes</p><h2>The system is designed around specific ways agents fail.</h2><div class="boundary-grid"><div class="boundary"><h3>Common risks</h3><ul><li>Session drift and scope creep</li><li>Claims of completion without runtime proof</li><li>Forgotten decisions trapped in chat history</li><li>Unclear branch or repository state</li><li>Handoffs that force the next agent to guess</li></ul></div><div class="boundary"><h3>Controls</h3><ul><li>Durable repo instructions and continuation state</li><li>Verification receipts tied to actual evidence</li><li>Closeout gates before declaring work complete</li><li>Explicit branch and task ownership</li><li>Compact handoff packets for continuation</li></ul></div></div></article>
+      <article class="detail-card"><p class="section-kicker">Trust model</p><h2>Model confidence is not verification.</h2><p>A persuasive response is still only a claim. The workflow favors direct evidence: tests, runtime output, screenshots, diffs, files, repository state and explicit user confirmation. If the evidence is incomplete, the work remains incomplete.</p></article>
+      <article class="detail-card"><p class="section-kicker">Human / AI boundary</p><h2>Agents execute inside an operating standard.</h2><p>The agent can analyze, edit, test, summarize and prepare handoffs, but the system does not treat autonomy as the goal. Scope, acceptance criteria and consequential decisions remain human-controlled. The operating layer exists specifically to make it easier to detect when the AI has moved outside those boundaries.</p></article>
+      <article class="detail-card"><p class="section-kicker">What this demonstrates</p><h2>Applied evaluation and reliability thinking.</h2><p>The project shows how I approach AI systems after the demo stage: define failure modes, create observable controls, preserve state, require evidence, and turn repeated mistakes into stronger instructions, checks and workflows.</p></article>
     </div>
-  </header>
-
-  <main id="top" class="detail-main">
-    <section class="detail-hero">
-      <div class="container">
-        <div class="detail-hero-panel">
-          <a class="crumb-link" href="../index.html#projects">Back to projects</a>
-          <h1>AuditME / CodexSystem</h1>
-          <p>My AI build operating layer: repo memory, verification gates, agent handoffs, closeout checks, and guardrails that keep long AI-assisted software sessions pointed at proof instead of drift.</p>
-          <div class="detail-meta-row">
-            <span>Agent operations</span>
-            <span>Repo memory</span>
-            <span>Verification receipts</span>
-            <span>Handoff control</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container detail-grid">
-        <div>
-          <article class="detail-card">
-            <h2>The problem</h2>
-            <p>AI coding sessions can move fast but drift, forget context, skip proof, or leave the next operator guessing. AuditME and CodexSystem are the response to that problem: make agent work inspectable, resumable, and harder to fake.</p>
-            <div class="detail-list">
-              <div>
-                <strong>Session drift</strong>
-                <span>Long builds need durable repo truth, not just chat memory.</span>
-              </div>
-              <div>
-                <strong>Proof gap</strong>
-                <span>Visual and runtime changes need screenshots, checks, diffs, and receipts.</span>
-              </div>
-              <div>
-                <strong>Handoff risk</strong>
-                <span>Another agent should be able to resume without guessing what happened.</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="detail-card">
-            <h2>System shape</h2>
-            <p>The system direction includes repo instructions, compact handoff state, task lanes, verification receipts, closeout gates, branch discipline, and startup context. It is less about one tool and more about an operating standard for AI-assisted engineering.</p>
-          </article>
-
-          <article class="detail-card">
-            <h2>What this shows</h2>
-            <div class="detail-list">
-              <div>
-                <strong>AI operations</strong>
-                <span>Building guardrails around agents instead of treating them as magic.</span>
-              </div>
-              <div>
-                <strong>Verification discipline</strong>
-                <span>Favoring runtime proof, screenshots, tests, and Git truth over claims.</span>
-              </div>
-              <div>
-                <strong>Process design</strong>
-                <span>Turning messy long-session work into a repeatable operator workflow.</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <aside class="detail-preview-panel">
-          <figure class="live-proof-shot">
-            <img src="../assets/portfolio-previews/auditme-preview.png" alt="AuditME agent operations dashboard screenshot" loading="lazy" decoding="async" width="1024" height="1024" />
-            <figcaption>
-              <strong>Agent operations dashboard</strong>
-              <span>Manage repo memory, track verification receipts, maintain branch hygiene, and align continuation state between multiple agent sessions.</span>
-            </figcaption>
-          </figure>
-          <div class="tags">
-            <span>Agent Orchestration</span>
-            <span>Repo Memory</span>
-            <span>Closeout</span>
-            <span>Receipts</span>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <nav class="container project-nav-ribbon" aria-label="Project navigation">
-      <a href="rdscore.html" class="project-nav-link prev-link">
-        <span>&larr; Previous Case Study</span>
-        <strong>RDSCore CRM Workspace</strong>
-      </a>
-      <a href="gthreads.html" class="project-nav-link next-link">
-        <span>Next Case Study &rarr;</span>
-        <strong>GThreads</strong>
-      </a>
-    </nav>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <span>James Clark · DevBuddy</span>
-      <a href="../proof-log.html">Proof Log</a>
-      <a href="../index.html#contact">Contact</a>
-    </div>
-  </footer>
-</body>
-</html>
+    <aside class="detail-side"><img src="../assets/portfolio-previews/auditme-preview.png" alt="AuditME agent operations dashboard" width="1024" height="1024" style="border-radius:14px;border:1px solid var(--line);margin-bottom:20px;"><h2>Project signal</h2><p>This is the clearest expression of how I think about reliable AI-assisted work.</p><div class="mini-list"><div><span>Core problem</span><strong>AI work becomes hard to trust when state and proof are conversational</strong></div><div><span>Operating principle</span><strong>Durable truth outside the model</strong></div><div><span>Verification</span><strong>Runtime evidence over claims</strong></div><div><span>Handoff</span><strong>Resume without guessing</strong></div><div><span>Goal</span><strong>Useful speed without invisible drift</strong></div></div><div class="hero-actions"><a class="button button-primary" href="mailto:pctechclark@gmail.com">Discuss the project</a><a class="button button-secondary" href="manager.html">See Manager</a></div></aside>
+  </div></section>
+</main>
+<footer class="site-footer"><div class="container footer-row"><span>James Clark · Applied AI workflows, agent systems and operations</span><div class="footer-links"><a href="../index.html">Home</a><a href="../proof-log.html">Proof Log</a><a href="https://github.com/Sinisterj12" target="_blank" rel="me noreferrer">GitHub</a></div></div></footer>
+</body></html>
